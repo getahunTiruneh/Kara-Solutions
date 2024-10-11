@@ -17,9 +17,12 @@ async def scrape_messages(channel_url, client):
             text = message.message if message.message else ''
             sender = message.sender_id if message.sender_id else 'Unknown'
             
+            # Format message_id to include channel name and underscore
+            formatted_msg_id = f"{channel_name}_{msg_id}"
+            
             # Append message info to the list
             messages.append({
-                'message_idid': msg_id,
+                'message_idid': formatted_msg_id,
                 'text': text,
                 'sender': sender,
                 'channel': channel_name,
