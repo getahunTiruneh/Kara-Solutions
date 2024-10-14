@@ -22,7 +22,7 @@ async def scrape_messages(channel_url, client):
             
             # Append message info to the list
             messages.append({
-                'message_idid': formatted_msg_id,
+                'message_id': formatted_msg_id,
                 'text': text,
                 'sender': sender,
                 'channel': channel_name,
