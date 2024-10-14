@@ -11,7 +11,8 @@ with filtered_data as (
     from "postgres"."public"."detection_results"
 )
 
-select 
+select
+    replace(image_name, '.jpg', '') as image_id,  -- Remove .jpg to get image_id 
     image_name,
     confidence_score,
     class_name,
