@@ -1,0 +1,11 @@
+.venv/
+.env
+*.log
+*.csv
+__pycache__/
+*.session
+logs/
+.pytest_cache/
+data/
+photos/
+new_env/
