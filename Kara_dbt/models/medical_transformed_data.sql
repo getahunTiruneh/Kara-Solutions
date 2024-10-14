@@ -9,7 +9,7 @@ with filterd_data as (
 )
 
 select 
-    message_id,
+    concat(channel, '_', message_id) as message_id,  -- Concatenate channel and message_id,
     date,
     extract(year from date) as year,
     extract(month from date) as month,
