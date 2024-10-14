@@ -1,0 +1,2382 @@
+[0m20:09:02.752642 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3D5ECEF90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3D97E7F50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3D96E5F70>]}
+
+
+============================== 20:09:02.804614 | de1428c8-6b38-4158-b186-d619e2615b04 ==============================
+[0m20:09:02.804614 [info ] [MainThread]: Running with dbt=1.8.7
+[0m20:09:02.823893 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Getahun\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'E:\\Kiffya_10_acc\\Week 7\\Kara-Solutions\\Kara_dbt\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m20:09:06.800054 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'de1428c8-6b38-4158-b186-d619e2615b04', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3D9998440>]}
+[0m20:09:06.919579 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'de1428c8-6b38-4158-b186-d619e2615b04', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3D9AC6F90>]}
+[0m20:09:06.924616 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m20:09:06.958615 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m20:09:06.962620 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m20:09:06.967617 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'de1428c8-6b38-4158-b186-d619e2615b04', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3DA04E000>]}
+[0m20:09:10.279732 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.Kara_dbt.example
+[0m20:09:10.317441 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'de1428c8-6b38-4158-b186-d619e2615b04', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3DB280860>]}
+[0m20:09:11.380239 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'de1428c8-6b38-4158-b186-d619e2615b04', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3DB4EFA70>]}
+[0m20:09:11.380239 [info ] [MainThread]: Found 2 models, 6 data tests, 1 source, 423 macros
+[0m20:09:11.380239 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'de1428c8-6b38-4158-b186-d619e2615b04', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3D888F3E0>]}
+[0m20:09:11.386409 [info ] [MainThread]: 
+[0m20:09:11.388396 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m20:09:11.402400 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m20:09:14.439986 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m20:09:14.439986 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m20:09:14.439986 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:09:14.819971 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.373 seconds
+[0m20:09:14.819971 [debug] [ThreadPool]: On list_postgres: Close
+[0m20:09:14.824990 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres_public'
+[0m20:09:14.849715 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m20:09:14.849715 [debug] [ThreadPool]: On list_postgres_public: BEGIN
+[0m20:09:14.849715 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:09:14.994569 [debug] [ThreadPool]: SQL status: BEGIN in 0.143 seconds
+[0m20:09:14.994569 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m20:09:14.994569 [debug] [ThreadPool]: On list_postgres_public: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "connection_name": "list_postgres_public"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m20:09:15.079794 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.084 seconds
+[0m20:09:15.085862 [debug] [ThreadPool]: On list_postgres_public: ROLLBACK
+[0m20:09:15.089947 [debug] [ThreadPool]: On list_postgres_public: Close
+[0m20:09:15.109598 [debug] [MainThread]: Using postgres connection "master"
+[0m20:09:15.109598 [debug] [MainThread]: On master: BEGIN
+[0m20:09:15.114620 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:09:15.290178 [debug] [MainThread]: SQL status: BEGIN in 0.174 seconds
+[0m20:09:15.290178 [debug] [MainThread]: Using postgres connection "master"
+[0m20:09:15.290178 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m20:09:15.364831 [debug] [MainThread]: SQL status: SELECT 0 in 0.074 seconds
+[0m20:09:15.364831 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'de1428c8-6b38-4158-b186-d619e2615b04', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3DB406BA0>]}
+[0m20:09:15.369882 [debug] [MainThread]: On master: ROLLBACK
+[0m20:09:15.369882 [debug] [MainThread]: Using postgres connection "master"
+[0m20:09:15.369882 [debug] [MainThread]: On master: BEGIN
+[0m20:09:15.369882 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m20:09:15.369882 [debug] [MainThread]: On master: COMMIT
+[0m20:09:15.369882 [debug] [MainThread]: Using postgres connection "master"
+[0m20:09:15.369882 [debug] [MainThread]: On master: COMMIT
+[0m20:09:15.369882 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m20:09:15.369882 [debug] [MainThread]: On master: Close
+[0m20:09:15.379901 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m20:09:15.379901 [info ] [MainThread]: 
+[0m20:09:15.457737 [debug] [Thread-1 (]: Began running node model.Kara_dbt.medical_data
+[0m20:09:15.459739 [info ] [Thread-1 (]: 1 of 2 START sql table model public.medical_data ............................... [RUN]
+[0m20:09:15.461739 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.Kara_dbt.medical_data'
+[0m20:09:15.462740 [debug] [Thread-1 (]: Began compiling node model.Kara_dbt.medical_data
+[0m20:09:15.477741 [debug] [Thread-1 (]: Writing injected SQL for node "model.Kara_dbt.medical_data"
+[0m20:09:15.486744 [debug] [Thread-1 (]: Began executing node model.Kara_dbt.medical_data
+[0m20:09:15.609953 [debug] [Thread-1 (]: Writing runtime sql for node "model.Kara_dbt.medical_data"
+[0m20:09:15.615000 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_data"
+[0m20:09:15.615000 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: BEGIN
+[0m20:09:15.619558 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:09:15.729740 [debug] [Thread-1 (]: SQL status: BEGIN in 0.118 seconds
+[0m20:09:15.729740 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_data"
+[0m20:09:15.739567 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_data"} */
+
+  
+    
+
+  create  table "postgres"."public"."medical_data__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+select * 
+from public.telegram_data
+  );
+  
+[0m20:09:16.079668 [debug] [Thread-1 (]: SQL status: SELECT 3979 in 0.343 seconds
+[0m20:09:16.102886 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_data"
+[0m20:09:16.103885 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_data"} */
+alter table "postgres"."public"."medical_data" rename to "medical_data__dbt_backup"
+[0m20:09:16.138884 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.033 seconds
+[0m20:09:16.219883 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_data"
+[0m20:09:16.220882 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_data"} */
+alter table "postgres"."public"."medical_data__dbt_tmp" rename to "medical_data"
+[0m20:09:16.222880 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m20:09:16.263887 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: COMMIT
+[0m20:09:16.263887 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_data"
+[0m20:09:16.264888 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: COMMIT
+[0m20:09:16.309621 [debug] [Thread-1 (]: SQL status: COMMIT in 0.051 seconds
+[0m20:09:16.324652 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public"."medical_data__dbt_backup"
+[0m20:09:16.334804 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_data"
+[0m20:09:16.334804 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_data"} */
+drop table if exists "postgres"."public"."medical_data__dbt_backup" cascade
+[0m20:09:16.500153 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.170 seconds
+[0m20:09:16.514762 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: Close
+[0m20:09:16.519889 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'de1428c8-6b38-4158-b186-d619e2615b04', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3DB909730>]}
+[0m20:09:16.524920 [info ] [Thread-1 (]: 1 of 2 OK created sql table model public.medical_data .......................... [[32mSELECT 3979[0m in 1.05s]
+[0m20:09:16.530130 [debug] [Thread-1 (]: Finished running node model.Kara_dbt.medical_data
+[0m20:09:16.535173 [debug] [Thread-1 (]: Began running node model.Kara_dbt.medical_transformed_data
+[0m20:09:16.539788 [info ] [Thread-1 (]: 2 of 2 START sql table model public.medical_transformed_data ................... [RUN]
+[0m20:09:16.539788 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.Kara_dbt.medical_data, now model.Kara_dbt.medical_transformed_data)
+[0m20:09:16.544805 [debug] [Thread-1 (]: Began compiling node model.Kara_dbt.medical_transformed_data
+[0m20:09:16.549902 [debug] [Thread-1 (]: Writing injected SQL for node "model.Kara_dbt.medical_transformed_data"
+[0m20:09:16.561950 [debug] [Thread-1 (]: Began executing node model.Kara_dbt.medical_transformed_data
+[0m20:09:16.567947 [debug] [Thread-1 (]: Writing runtime sql for node "model.Kara_dbt.medical_transformed_data"
+[0m20:09:16.571950 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_transformed_data"
+[0m20:09:16.572954 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: BEGIN
+[0m20:09:16.573964 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:09:16.684726 [debug] [Thread-1 (]: SQL status: BEGIN in 0.113 seconds
+[0m20:09:16.684726 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_transformed_data"
+[0m20:09:16.684726 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_transformed_data"} */
+
+  
+    
+
+  create  table "postgres"."public"."medical_transformed_data__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- Use the `ref` function to select from other models
+
+
+
+with filterd_data as (
+    select * from "postgres"."public"."telegram_data"
+    
+)
+
+select 
+    message_id,
+    date,
+    sender,
+    channel,
+    text    
+from filterd_data
+  );
+  
+[0m20:09:16.800023 [debug] [Thread-1 (]: SQL status: SELECT 3979 in 0.115 seconds
+[0m20:09:16.809649 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_transformed_data"
+[0m20:09:16.809649 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_transformed_data"} */
+alter table "postgres"."public"."medical_transformed_data" rename to "medical_transformed_data__dbt_backup"
+[0m20:09:16.809649 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m20:09:16.809649 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_transformed_data"
+[0m20:09:16.809649 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_transformed_data"} */
+alter table "postgres"."public"."medical_transformed_data__dbt_tmp" rename to "medical_transformed_data"
+[0m20:09:16.819965 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m20:09:16.819965 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: COMMIT
+[0m20:09:16.819965 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_transformed_data"
+[0m20:09:16.819965 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: COMMIT
+[0m20:09:16.830193 [debug] [Thread-1 (]: SQL status: COMMIT in 0.008 seconds
+[0m20:09:16.830193 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public"."medical_transformed_data__dbt_backup"
+[0m20:09:16.830193 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_transformed_data"
+[0m20:09:16.840014 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_transformed_data"} */
+drop table if exists "postgres"."public"."medical_transformed_data__dbt_backup" cascade
+[0m20:09:16.949900 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.112 seconds
+[0m20:09:16.949900 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: Close
+[0m20:09:16.949900 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'de1428c8-6b38-4158-b186-d619e2615b04', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3DB31B5F0>]}
+[0m20:09:16.949900 [info ] [Thread-1 (]: 2 of 2 OK created sql table model public.medical_transformed_data .............. [[32mSELECT 3979[0m in 0.41s]
+[0m20:09:16.960070 [debug] [Thread-1 (]: Finished running node model.Kara_dbt.medical_transformed_data
+[0m20:09:16.970059 [debug] [MainThread]: Using postgres connection "master"
+[0m20:09:16.971054 [debug] [MainThread]: On master: BEGIN
+[0m20:09:16.972056 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:09:17.099817 [debug] [MainThread]: SQL status: BEGIN in 0.133 seconds
+[0m20:09:17.099817 [debug] [MainThread]: On master: COMMIT
+[0m20:09:17.099817 [debug] [MainThread]: Using postgres connection "master"
+[0m20:09:17.099817 [debug] [MainThread]: On master: COMMIT
+[0m20:09:17.099817 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m20:09:17.110100 [debug] [MainThread]: On master: Close
+[0m20:09:17.110100 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:09:17.110100 [debug] [MainThread]: Connection 'list_postgres' was properly closed.
+[0m20:09:17.110100 [debug] [MainThread]: Connection 'list_postgres_public' was properly closed.
+[0m20:09:17.110100 [debug] [MainThread]: Connection 'model.Kara_dbt.medical_transformed_data' was properly closed.
+[0m20:09:17.110100 [info ] [MainThread]: 
+[0m20:09:17.110100 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 5.72 seconds (5.72s).
+[0m20:09:17.124043 [debug] [MainThread]: Command end result
+[0m20:09:17.205043 [info ] [MainThread]: 
+[0m20:09:17.208040 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:09:17.210040 [info ] [MainThread]: 
+[0m20:09:17.212038 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m20:09:17.219036 [debug] [MainThread]: Command `dbt run` succeeded at 20:09:17.219036 after 15.20 seconds
+[0m20:09:17.220035 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3D97E7860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3DB4E69C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3DB4E6570>]}
+[0m20:09:17.221036 [debug] [MainThread]: Flushing usage events
+[0m20:13:12.572098 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB06DA8350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB06910B00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB06912ED0>]}
+
+
+============================== 20:13:12.585096 | a408b4f0-cda8-4e39-ade0-70a8ecec0cab ==============================
+[0m20:13:12.585096 [info ] [MainThread]: Running with dbt=1.8.7
+[0m20:13:12.589097 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Getahun\\.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'E:\\Kiffya_10_acc\\Week 7\\Kara-Solutions\\Kara_dbt\\logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m20:13:13.444297 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a408b4f0-cda8-4e39-ade0-70a8ecec0cab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB06DAB500>]}
+[0m20:13:13.769726 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a408b4f0-cda8-4e39-ade0-70a8ecec0cab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB04C9F9E0>]}
+[0m20:13:13.769757 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m20:13:13.805443 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m20:13:17.386230 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 3 files changed.
+[0m20:13:17.388203 [debug] [MainThread]: Partial parsing: updated file: Kara_dbt://models\schema.yml
+[0m20:13:17.388203 [debug] [MainThread]: Partial parsing: updated file: Kara_dbt://models\medical_data.sql
+[0m20:13:17.389203 [debug] [MainThread]: Partial parsing: updated file: Kara_dbt://models\medical_transformed_data.sql
+[0m20:13:18.724473 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.Kara_dbt.example
+[0m20:13:18.753310 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a408b4f0-cda8-4e39-ade0-70a8ecec0cab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB08995A30>]}
+[0m20:13:19.479812 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a408b4f0-cda8-4e39-ade0-70a8ecec0cab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB08C6EF00>]}
+[0m20:13:19.481815 [info ] [MainThread]: Found 2 models, 6 data tests, 1 source, 423 macros
+[0m20:13:19.503814 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a408b4f0-cda8-4e39-ade0-70a8ecec0cab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB08939460>]}
+[0m20:13:19.510818 [info ] [MainThread]: 
+[0m20:13:19.557817 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m20:13:19.575816 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m20:13:20.519088 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m20:13:20.521088 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m20:13:20.523091 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:13:21.037544 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.515 seconds
+[0m20:13:21.041542 [debug] [ThreadPool]: On list_postgres: Close
+[0m20:13:21.051551 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres_public'
+[0m20:13:21.072549 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m20:13:21.074551 [debug] [ThreadPool]: On list_postgres_public: BEGIN
+[0m20:13:21.077602 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:13:21.333578 [debug] [ThreadPool]: SQL status: BEGIN in 0.256 seconds
+[0m20:13:21.335549 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m20:13:21.336548 [debug] [ThreadPool]: On list_postgres_public: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "connection_name": "list_postgres_public"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m20:13:21.374544 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.037 seconds
+[0m20:13:21.379548 [debug] [ThreadPool]: On list_postgres_public: ROLLBACK
+[0m20:13:21.399549 [debug] [ThreadPool]: On list_postgres_public: Close
+[0m20:13:21.425550 [debug] [MainThread]: Using postgres connection "master"
+[0m20:13:21.427594 [debug] [MainThread]: On master: BEGIN
+[0m20:13:21.429549 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:13:21.703549 [debug] [MainThread]: SQL status: BEGIN in 0.275 seconds
+[0m20:13:21.705548 [debug] [MainThread]: Using postgres connection "master"
+[0m20:13:21.706550 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m20:13:21.790548 [debug] [MainThread]: SQL status: SELECT 0 in 0.082 seconds
+[0m20:13:21.794548 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a408b4f0-cda8-4e39-ade0-70a8ecec0cab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB06DA9130>]}
+[0m20:13:21.796552 [debug] [MainThread]: On master: ROLLBACK
+[0m20:13:21.798550 [debug] [MainThread]: Using postgres connection "master"
+[0m20:13:21.799548 [debug] [MainThread]: On master: BEGIN
+[0m20:13:21.802547 [debug] [MainThread]: SQL status: BEGIN in 0.002 seconds
+[0m20:13:21.803548 [debug] [MainThread]: On master: COMMIT
+[0m20:13:21.804549 [debug] [MainThread]: Using postgres connection "master"
+[0m20:13:21.805549 [debug] [MainThread]: On master: COMMIT
+[0m20:13:21.807548 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m20:13:21.808547 [debug] [MainThread]: On master: Close
+[0m20:13:21.811549 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m20:13:21.817548 [info ] [MainThread]: 
+[0m20:13:21.964183 [debug] [Thread-1 (]: Began running node model.Kara_dbt.medical_data
+[0m20:13:21.966184 [info ] [Thread-1 (]: 1 of 2 START sql table model public.medical_data ............................... [RUN]
+[0m20:13:22.003909 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.Kara_dbt.medical_data'
+[0m20:13:22.004909 [debug] [Thread-1 (]: Began compiling node model.Kara_dbt.medical_data
+[0m20:13:22.061908 [debug] [Thread-1 (]: Writing injected SQL for node "model.Kara_dbt.medical_data"
+[0m20:13:22.066908 [debug] [Thread-1 (]: Began executing node model.Kara_dbt.medical_data
+[0m20:13:22.211708 [debug] [Thread-1 (]: Writing runtime sql for node "model.Kara_dbt.medical_data"
+[0m20:13:22.216709 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_data"
+[0m20:13:22.217709 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: BEGIN
+[0m20:13:22.218711 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:13:22.432710 [debug] [Thread-1 (]: SQL status: BEGIN in 0.214 seconds
+[0m20:13:22.434712 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_data"
+[0m20:13:22.435711 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_data"} */
+
+  
+    
+
+  create  table "postgres"."public"."medical_data__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+select * 
+from public.medical_data
+  );
+  
+[0m20:13:22.869084 [debug] [Thread-1 (]: SQL status: SELECT 3979 in 0.431 seconds
+[0m20:13:22.889086 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_data"
+[0m20:13:22.890084 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_data"} */
+alter table "postgres"."public"."medical_data" rename to "medical_data__dbt_backup"
+[0m20:13:22.940082 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.048 seconds
+[0m20:13:22.953087 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_data"
+[0m20:13:22.955088 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_data"} */
+alter table "postgres"."public"."medical_data__dbt_tmp" rename to "medical_data"
+[0m20:13:22.959085 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m20:13:23.030083 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: COMMIT
+[0m20:13:23.032084 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_data"
+[0m20:13:23.034084 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: COMMIT
+[0m20:13:25.169952 [debug] [Thread-1 (]: SQL status: COMMIT in 2.135 seconds
+[0m20:13:25.184932 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public"."medical_data__dbt_backup"
+[0m20:13:25.199793 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_data"
+[0m20:13:25.199793 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_data"} */
+drop table if exists "postgres"."public"."medical_data__dbt_backup" cascade
+[0m20:13:25.429812 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.227 seconds
+[0m20:13:25.434829 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: Close
+[0m20:13:25.439441 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a408b4f0-cda8-4e39-ade0-70a8ecec0cab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB04C3EFF0>]}
+[0m20:13:25.439441 [info ] [Thread-1 (]: 1 of 2 OK created sql table model public.medical_data .......................... [[32mSELECT 3979[0m in 3.44s]
+[0m20:13:25.444460 [debug] [Thread-1 (]: Finished running node model.Kara_dbt.medical_data
+[0m20:13:25.444460 [debug] [Thread-1 (]: Began running node model.Kara_dbt.medical_transformed_data
+[0m20:13:25.449511 [info ] [Thread-1 (]: 2 of 2 START sql table model public.medical_transformed_data ................... [RUN]
+[0m20:13:25.449511 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.Kara_dbt.medical_data, now model.Kara_dbt.medical_transformed_data)
+[0m20:13:25.454524 [debug] [Thread-1 (]: Began compiling node model.Kara_dbt.medical_transformed_data
+[0m20:13:25.459583 [debug] [Thread-1 (]: Writing injected SQL for node "model.Kara_dbt.medical_transformed_data"
+[0m20:13:25.464597 [debug] [Thread-1 (]: Began executing node model.Kara_dbt.medical_transformed_data
+[0m20:13:25.474670 [debug] [Thread-1 (]: Writing runtime sql for node "model.Kara_dbt.medical_transformed_data"
+[0m20:13:25.474670 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_transformed_data"
+[0m20:13:25.479730 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: BEGIN
+[0m20:13:25.479730 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:13:26.404838 [debug] [Thread-1 (]: SQL status: BEGIN in 0.927 seconds
+[0m20:13:26.404838 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_transformed_data"
+[0m20:13:26.409465 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_transformed_data"} */
+
+  
+    
+
+  create  table "postgres"."public"."medical_transformed_data__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- Use the `ref` function to select from other models
+
+
+
+with filterd_data as (
+    select * from "postgres"."public"."medical_data"
+    
+)
+
+select 
+    message_id,
+    date,
+    sender,
+    channel,
+    text    
+from filterd_data
+  );
+  
+[0m20:13:27.009583 [debug] [Thread-1 (]: SQL status: SELECT 3979 in 0.603 seconds
+[0m20:13:27.019672 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_transformed_data"
+[0m20:13:27.019672 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_transformed_data"} */
+alter table "postgres"."public"."medical_transformed_data" rename to "medical_transformed_data__dbt_backup"
+[0m20:13:27.024689 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m20:13:27.034970 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_transformed_data"
+[0m20:13:27.034970 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_transformed_data"} */
+alter table "postgres"."public"."medical_transformed_data__dbt_tmp" rename to "medical_transformed_data"
+[0m20:13:27.099520 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.064 seconds
+[0m20:13:27.104532 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: COMMIT
+[0m20:13:27.109590 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_transformed_data"
+[0m20:13:27.109590 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: COMMIT
+[0m20:13:27.784542 [debug] [Thread-1 (]: SQL status: COMMIT in 0.671 seconds
+[0m20:13:27.789635 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public"."medical_transformed_data__dbt_backup"
+[0m20:13:27.789635 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_transformed_data"
+[0m20:13:27.789635 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_transformed_data"} */
+drop table if exists "postgres"."public"."medical_transformed_data__dbt_backup" cascade
+[0m20:13:28.047496 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.253 seconds
+[0m20:13:28.052493 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: Close
+[0m20:13:28.054498 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a408b4f0-cda8-4e39-ade0-70a8ecec0cab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB08B8EF30>]}
+[0m20:13:28.057496 [info ] [Thread-1 (]: 2 of 2 OK created sql table model public.medical_transformed_data .............. [[32mSELECT 3979[0m in 2.60s]
+[0m20:13:28.073500 [debug] [Thread-1 (]: Finished running node model.Kara_dbt.medical_transformed_data
+[0m20:13:28.076494 [debug] [MainThread]: Using postgres connection "master"
+[0m20:13:28.078492 [debug] [MainThread]: On master: BEGIN
+[0m20:13:28.080499 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:13:29.430251 [debug] [MainThread]: SQL status: BEGIN in 1.349 seconds
+[0m20:13:29.431250 [debug] [MainThread]: On master: COMMIT
+[0m20:13:29.432254 [debug] [MainThread]: Using postgres connection "master"
+[0m20:13:29.433251 [debug] [MainThread]: On master: COMMIT
+[0m20:13:29.436248 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m20:13:29.437249 [debug] [MainThread]: On master: Close
+[0m20:13:29.439253 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:13:29.446259 [debug] [MainThread]: Connection 'list_postgres' was properly closed.
+[0m20:13:29.448249 [debug] [MainThread]: Connection 'list_postgres_public' was properly closed.
+[0m20:13:29.449257 [debug] [MainThread]: Connection 'model.Kara_dbt.medical_transformed_data' was properly closed.
+[0m20:13:29.450252 [info ] [MainThread]: 
+[0m20:13:29.463257 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 9.89 seconds (9.89s).
+[0m20:13:29.471249 [debug] [MainThread]: Command end result
+[0m20:13:29.625248 [info ] [MainThread]: 
+[0m20:13:29.632255 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:13:29.634249 [info ] [MainThread]: 
+[0m20:13:29.635251 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m20:13:29.648253 [debug] [MainThread]: Command `dbt run` succeeded at 20:13:29.647255 after 17.45 seconds
+[0m20:13:29.649247 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB06CF6AE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB073DA600>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB0152DBB0>]}
+[0m20:13:29.651246 [debug] [MainThread]: Flushing usage events
+[0m20:19:04.950277 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DE22FCB00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DE228A7B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DE2289040>]}
+
+
+============================== 20:19:04.957273 | 25698f26-04ce-41c8-9cf4-e523ba903509 ==============================
+[0m20:19:04.957273 [info ] [MainThread]: Running with dbt=1.8.7
+[0m20:19:04.959279 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'E:\\Kiffya_10_acc\\Week 7\\Kara-Solutions\\Kara_dbt\\logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\Getahun\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m20:19:05.445278 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '25698f26-04ce-41c8-9cf4-e523ba903509', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DE24D5100>]}
+[0m20:19:05.553271 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '25698f26-04ce-41c8-9cf4-e523ba903509', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DE2226600>]}
+[0m20:19:05.555275 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m20:19:05.582298 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m20:19:05.894356 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m20:19:05.894356 [debug] [MainThread]: Partial parsing: updated file: Kara_dbt://models\medical_transformed_data.sql
+[0m20:19:06.559732 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.Kara_dbt.example
+[0m20:19:06.592997 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '25698f26-04ce-41c8-9cf4-e523ba903509', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DE2A41BB0>]}
+[0m20:19:06.783169 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '25698f26-04ce-41c8-9cf4-e523ba903509', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DE2435B50>]}
+[0m20:19:06.784169 [info ] [MainThread]: Found 2 models, 6 data tests, 1 source, 423 macros
+[0m20:19:06.786171 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '25698f26-04ce-41c8-9cf4-e523ba903509', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DE2B543B0>]}
+[0m20:19:06.790176 [info ] [MainThread]: 
+[0m20:19:06.792170 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m20:19:06.804169 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m20:19:07.019314 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m20:19:07.029444 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m20:19:07.029444 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:19:07.119344 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.099 seconds
+[0m20:19:07.129377 [debug] [ThreadPool]: On list_postgres: Close
+[0m20:19:07.129377 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres_public'
+[0m20:19:07.144330 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m20:19:07.144330 [debug] [ThreadPool]: On list_postgres_public: BEGIN
+[0m20:19:07.144330 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:19:07.264596 [debug] [ThreadPool]: SQL status: BEGIN in 0.117 seconds
+[0m20:19:07.264596 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m20:19:07.264596 [debug] [ThreadPool]: On list_postgres_public: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "connection_name": "list_postgres_public"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m20:19:07.269699 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.008 seconds
+[0m20:19:07.269699 [debug] [ThreadPool]: On list_postgres_public: ROLLBACK
+[0m20:19:07.279533 [debug] [ThreadPool]: On list_postgres_public: Close
+[0m20:19:07.289491 [debug] [MainThread]: Using postgres connection "master"
+[0m20:19:07.289491 [debug] [MainThread]: On master: BEGIN
+[0m20:19:07.289491 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:19:07.389603 [debug] [MainThread]: SQL status: BEGIN in 0.099 seconds
+[0m20:19:07.389603 [debug] [MainThread]: Using postgres connection "master"
+[0m20:19:07.389603 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m20:19:07.404695 [debug] [MainThread]: SQL status: SELECT 0 in 0.014 seconds
+[0m20:19:07.409741 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '25698f26-04ce-41c8-9cf4-e523ba903509', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DE3EABC50>]}
+[0m20:19:07.409741 [debug] [MainThread]: On master: ROLLBACK
+[0m20:19:07.414755 [debug] [MainThread]: Using postgres connection "master"
+[0m20:19:07.414755 [debug] [MainThread]: On master: BEGIN
+[0m20:19:07.414755 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m20:19:07.414755 [debug] [MainThread]: On master: COMMIT
+[0m20:19:07.414755 [debug] [MainThread]: Using postgres connection "master"
+[0m20:19:07.419857 [debug] [MainThread]: On master: COMMIT
+[0m20:19:07.419857 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m20:19:07.419857 [debug] [MainThread]: On master: Close
+[0m20:19:07.419857 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m20:19:07.424375 [info ] [MainThread]: 
+[0m20:19:07.430981 [debug] [Thread-1 (]: Began running node model.Kara_dbt.medical_data
+[0m20:19:07.433978 [info ] [Thread-1 (]: 1 of 2 START sql table model public.medical_data ............................... [RUN]
+[0m20:19:07.436999 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.Kara_dbt.medical_data'
+[0m20:19:07.436999 [debug] [Thread-1 (]: Began compiling node model.Kara_dbt.medical_data
+[0m20:19:07.451996 [debug] [Thread-1 (]: Writing injected SQL for node "model.Kara_dbt.medical_data"
+[0m20:19:07.454977 [debug] [Thread-1 (]: Began executing node model.Kara_dbt.medical_data
+[0m20:19:07.534314 [debug] [Thread-1 (]: Writing runtime sql for node "model.Kara_dbt.medical_data"
+[0m20:19:07.539394 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_data"
+[0m20:19:07.539394 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: BEGIN
+[0m20:19:07.539394 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:19:07.659481 [debug] [Thread-1 (]: SQL status: BEGIN in 0.118 seconds
+[0m20:19:07.659481 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_data"
+[0m20:19:07.659481 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_data"} */
+
+  
+    
+
+  create  table "postgres"."public"."medical_data__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+select * 
+from public.medical_data
+  );
+  
+[0m20:19:07.724372 [debug] [Thread-1 (]: SQL status: SELECT 3979 in 0.065 seconds
+[0m20:19:07.734490 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_data"
+[0m20:19:07.739596 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_data"} */
+alter table "postgres"."public"."medical_data" rename to "medical_data__dbt_backup"
+[0m20:19:07.739596 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m20:19:07.749731 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_data"
+[0m20:19:07.749731 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_data"} */
+alter table "postgres"."public"."medical_data__dbt_tmp" rename to "medical_data"
+[0m20:19:07.749731 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m20:19:07.784669 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: COMMIT
+[0m20:19:07.784669 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_data"
+[0m20:19:07.784669 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: COMMIT
+[0m20:19:07.799649 [debug] [Thread-1 (]: SQL status: COMMIT in 0.020 seconds
+[0m20:19:07.818925 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public"."medical_data__dbt_backup"
+[0m20:19:07.826925 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_data"
+[0m20:19:07.827927 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_data"} */
+drop table if exists "postgres"."public"."medical_data__dbt_backup" cascade
+[0m20:19:07.840125 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.012 seconds
+[0m20:19:07.842347 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: Close
+[0m20:19:07.842347 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '25698f26-04ce-41c8-9cf4-e523ba903509', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DDFE3EED0>]}
+[0m20:19:07.842347 [info ] [Thread-1 (]: 1 of 2 OK created sql table model public.medical_data .......................... [[32mSELECT 3979[0m in 0.41s]
+[0m20:19:07.849451 [debug] [Thread-1 (]: Finished running node model.Kara_dbt.medical_data
+[0m20:19:07.849451 [debug] [Thread-1 (]: Began running node model.Kara_dbt.medical_transformed_data
+[0m20:19:07.854468 [info ] [Thread-1 (]: 2 of 2 START sql table model public.medical_transformed_data ................... [RUN]
+[0m20:19:07.854468 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.Kara_dbt.medical_data, now model.Kara_dbt.medical_transformed_data)
+[0m20:19:07.854468 [debug] [Thread-1 (]: Began compiling node model.Kara_dbt.medical_transformed_data
+[0m20:19:07.863476 [debug] [Thread-1 (]: Writing injected SQL for node "model.Kara_dbt.medical_transformed_data"
+[0m20:19:07.870474 [debug] [Thread-1 (]: Began executing node model.Kara_dbt.medical_transformed_data
+[0m20:19:07.881473 [debug] [Thread-1 (]: Writing runtime sql for node "model.Kara_dbt.medical_transformed_data"
+[0m20:19:07.887480 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_transformed_data"
+[0m20:19:07.888479 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: BEGIN
+[0m20:19:07.889477 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:19:08.004622 [debug] [Thread-1 (]: SQL status: BEGIN in 0.117 seconds
+[0m20:19:08.004622 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_transformed_data"
+[0m20:19:08.004622 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_transformed_data"} */
+
+  
+    
+
+  create  table "postgres"."public"."medical_transformed_data__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- Use the `ref` function to select from other models
+
+
+
+with filterd_data as (
+    select * from "postgres"."public"."medical_data"
+    
+)
+
+select 
+    message_id,
+    date,
+    sender,
+    channel,
+    text,
+    extract(year from date) as year,
+    extract(month from date) as month,
+    extract(day from date) as day    
+from filterd_data
+  );
+  
+[0m20:19:08.149768 [debug] [Thread-1 (]: SQL status: SELECT 3979 in 0.144 seconds
+[0m20:19:08.154308 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_transformed_data"
+[0m20:19:08.154308 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_transformed_data"} */
+alter table "postgres"."public"."medical_transformed_data" rename to "medical_transformed_data__dbt_backup"
+[0m20:19:08.159403 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m20:19:08.164453 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_transformed_data"
+[0m20:19:08.166010 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_transformed_data"} */
+alter table "postgres"."public"."medical_transformed_data__dbt_tmp" rename to "medical_transformed_data"
+[0m20:19:08.166010 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m20:19:08.169579 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: COMMIT
+[0m20:19:08.169579 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_transformed_data"
+[0m20:19:08.169579 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: COMMIT
+[0m20:19:08.184866 [debug] [Thread-1 (]: SQL status: COMMIT in 0.012 seconds
+[0m20:19:08.189431 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public"."medical_transformed_data__dbt_backup"
+[0m20:19:08.189431 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_transformed_data"
+[0m20:19:08.189431 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_transformed_data"} */
+drop table if exists "postgres"."public"."medical_transformed_data__dbt_backup" cascade
+[0m20:19:08.214442 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.021 seconds
+[0m20:19:08.214442 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: Close
+[0m20:19:08.214442 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '25698f26-04ce-41c8-9cf4-e523ba903509', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DE42359D0>]}
+[0m20:19:08.219515 [info ] [Thread-1 (]: 2 of 2 OK created sql table model public.medical_transformed_data .............. [[32mSELECT 3979[0m in 0.36s]
+[0m20:19:08.219515 [debug] [Thread-1 (]: Finished running node model.Kara_dbt.medical_transformed_data
+[0m20:19:08.225941 [debug] [MainThread]: Using postgres connection "master"
+[0m20:19:08.226938 [debug] [MainThread]: On master: BEGIN
+[0m20:19:08.228947 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:19:08.344397 [debug] [MainThread]: SQL status: BEGIN in 0.119 seconds
+[0m20:19:08.344397 [debug] [MainThread]: On master: COMMIT
+[0m20:19:08.344397 [debug] [MainThread]: Using postgres connection "master"
+[0m20:19:08.350097 [debug] [MainThread]: On master: COMMIT
+[0m20:19:08.352094 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m20:19:08.353093 [debug] [MainThread]: On master: Close
+[0m20:19:08.354093 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:19:08.355097 [debug] [MainThread]: Connection 'list_postgres' was properly closed.
+[0m20:19:08.356096 [debug] [MainThread]: Connection 'list_postgres_public' was properly closed.
+[0m20:19:08.357096 [debug] [MainThread]: Connection 'model.Kara_dbt.medical_transformed_data' was properly closed.
+[0m20:19:08.357096 [info ] [MainThread]: 
+[0m20:19:08.359093 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 1.57 seconds (1.57s).
+[0m20:19:08.362099 [debug] [MainThread]: Command end result
+[0m20:19:08.450512 [info ] [MainThread]: 
+[0m20:19:08.452514 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:19:08.453511 [info ] [MainThread]: 
+[0m20:19:08.455510 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m20:19:08.464514 [debug] [MainThread]: Command `dbt run` succeeded at 20:19:08.464514 after 3.84 seconds
+[0m20:19:08.465508 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DE212A360>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DE29933B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DE20FFAD0>]}
+[0m20:19:08.466510 [debug] [MainThread]: Flushing usage events
+[0m20:20:26.014474 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ECAA5C53D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ECAA5C75C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ECAAD81E50>]}
+
+
+============================== 20:20:26.019524 | 69e6c80d-a1ea-471c-ac89-2dfb76911e2e ==============================
+[0m20:20:26.019524 [info ] [MainThread]: Running with dbt=1.8.7
+[0m20:20:26.019524 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Getahun\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'E:\\Kiffya_10_acc\\Week 7\\Kara-Solutions\\Kara_dbt\\logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m20:20:26.454730 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '69e6c80d-a1ea-471c-ac89-2dfb76911e2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ECAAF1D670>]}
+[0m20:20:26.544376 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '69e6c80d-a1ea-471c-ac89-2dfb76911e2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ECAA4D32F0>]}
+[0m20:20:26.544376 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m20:20:26.573461 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m20:20:26.884628 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m20:20:26.884628 [debug] [MainThread]: Partial parsing: updated file: Kara_dbt://models\medical_transformed_data.sql
+[0m20:20:27.669319 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.Kara_dbt.example
+[0m20:20:27.708517 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '69e6c80d-a1ea-471c-ac89-2dfb76911e2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ECAC7D1820>]}
+[0m20:20:27.899728 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '69e6c80d-a1ea-471c-ac89-2dfb76911e2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ECAB53FBC0>]}
+[0m20:20:27.899728 [info ] [MainThread]: Found 2 models, 6 data tests, 1 source, 423 macros
+[0m20:20:27.899728 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '69e6c80d-a1ea-471c-ac89-2dfb76911e2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ECAC932120>]}
+[0m20:20:27.911355 [info ] [MainThread]: 
+[0m20:20:27.914353 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m20:20:27.934356 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m20:20:28.164190 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m20:20:28.164190 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m20:20:28.164190 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:20:28.279401 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.120 seconds
+[0m20:20:28.279401 [debug] [ThreadPool]: On list_postgres: Close
+[0m20:20:28.289396 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres_public'
+[0m20:20:28.304527 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m20:20:28.304527 [debug] [ThreadPool]: On list_postgres_public: BEGIN
+[0m20:20:28.304527 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:20:28.414340 [debug] [ThreadPool]: SQL status: BEGIN in 0.108 seconds
+[0m20:20:28.414340 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m20:20:28.419427 [debug] [ThreadPool]: On list_postgres_public: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "connection_name": "list_postgres_public"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m20:20:28.434502 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.016 seconds
+[0m20:20:28.434502 [debug] [ThreadPool]: On list_postgres_public: ROLLBACK
+[0m20:20:28.439570 [debug] [ThreadPool]: On list_postgres_public: Close
+[0m20:20:28.449563 [debug] [MainThread]: Using postgres connection "master"
+[0m20:20:28.449563 [debug] [MainThread]: On master: BEGIN
+[0m20:20:28.449563 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:20:28.574393 [debug] [MainThread]: SQL status: BEGIN in 0.125 seconds
+[0m20:20:28.574393 [debug] [MainThread]: Using postgres connection "master"
+[0m20:20:28.579433 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m20:20:28.589514 [debug] [MainThread]: SQL status: SELECT 0 in 0.017 seconds
+[0m20:20:28.599192 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '69e6c80d-a1ea-471c-ac89-2dfb76911e2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ECAC810560>]}
+[0m20:20:28.599192 [debug] [MainThread]: On master: ROLLBACK
+[0m20:20:28.599192 [debug] [MainThread]: Using postgres connection "master"
+[0m20:20:28.599192 [debug] [MainThread]: On master: BEGIN
+[0m20:20:28.599192 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m20:20:28.599192 [debug] [MainThread]: On master: COMMIT
+[0m20:20:28.599192 [debug] [MainThread]: Using postgres connection "master"
+[0m20:20:28.599192 [debug] [MainThread]: On master: COMMIT
+[0m20:20:28.599192 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m20:20:28.609501 [debug] [MainThread]: On master: Close
+[0m20:20:28.609501 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m20:20:28.609501 [info ] [MainThread]: 
+[0m20:20:28.619331 [debug] [Thread-1 (]: Began running node model.Kara_dbt.medical_data
+[0m20:20:28.619331 [info ] [Thread-1 (]: 1 of 2 START sql table model public.medical_data ............................... [RUN]
+[0m20:20:28.619331 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.Kara_dbt.medical_data'
+[0m20:20:28.629256 [debug] [Thread-1 (]: Began compiling node model.Kara_dbt.medical_data
+[0m20:20:28.654144 [debug] [Thread-1 (]: Writing injected SQL for node "model.Kara_dbt.medical_data"
+[0m20:20:28.657086 [debug] [Thread-1 (]: Began executing node model.Kara_dbt.medical_data
+[0m20:20:28.741085 [debug] [Thread-1 (]: Writing runtime sql for node "model.Kara_dbt.medical_data"
+[0m20:20:28.745090 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_data"
+[0m20:20:28.747088 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: BEGIN
+[0m20:20:28.748169 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:20:28.839313 [debug] [Thread-1 (]: SQL status: BEGIN in 0.092 seconds
+[0m20:20:28.839313 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_data"
+[0m20:20:28.839313 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_data"} */
+
+  
+    
+
+  create  table "postgres"."public"."medical_data__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+select * 
+from public.medical_data
+  );
+  
+[0m20:20:28.901867 [debug] [Thread-1 (]: SQL status: SELECT 3979 in 0.059 seconds
+[0m20:20:28.914865 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_data"
+[0m20:20:28.915865 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_data"} */
+alter table "postgres"."public"."medical_data" rename to "medical_data__dbt_backup"
+[0m20:20:28.918862 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m20:20:28.925860 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_data"
+[0m20:20:28.926860 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_data"} */
+alter table "postgres"."public"."medical_data__dbt_tmp" rename to "medical_data"
+[0m20:20:28.928889 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m20:20:28.964652 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: COMMIT
+[0m20:20:28.964652 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_data"
+[0m20:20:28.964652 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: COMMIT
+[0m20:20:28.979610 [debug] [Thread-1 (]: SQL status: COMMIT in 0.018 seconds
+[0m20:20:28.989386 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public"."medical_data__dbt_backup"
+[0m20:20:28.999409 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_data"
+[0m20:20:28.999409 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_data"} */
+drop table if exists "postgres"."public"."medical_data__dbt_backup" cascade
+[0m20:20:29.029619 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.030 seconds
+[0m20:20:29.029619 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: Close
+[0m20:20:29.039457 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '69e6c80d-a1ea-471c-ac89-2dfb76911e2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ECAA62D4F0>]}
+[0m20:20:29.039457 [info ] [Thread-1 (]: 1 of 2 OK created sql table model public.medical_data .......................... [[32mSELECT 3979[0m in 0.42s]
+[0m20:20:29.048648 [debug] [Thread-1 (]: Finished running node model.Kara_dbt.medical_data
+[0m20:20:29.050647 [debug] [Thread-1 (]: Began running node model.Kara_dbt.medical_transformed_data
+[0m20:20:29.055729 [info ] [Thread-1 (]: 2 of 2 START sql table model public.medical_transformed_data ................... [RUN]
+[0m20:20:29.061978 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.Kara_dbt.medical_data, now model.Kara_dbt.medical_transformed_data)
+[0m20:20:29.062973 [debug] [Thread-1 (]: Began compiling node model.Kara_dbt.medical_transformed_data
+[0m20:20:29.072974 [debug] [Thread-1 (]: Writing injected SQL for node "model.Kara_dbt.medical_transformed_data"
+[0m20:20:29.078978 [debug] [Thread-1 (]: Began executing node model.Kara_dbt.medical_transformed_data
+[0m20:20:29.086971 [debug] [Thread-1 (]: Writing runtime sql for node "model.Kara_dbt.medical_transformed_data"
+[0m20:20:29.093972 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_transformed_data"
+[0m20:20:29.094973 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: BEGIN
+[0m20:20:29.095970 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:20:29.224390 [debug] [Thread-1 (]: SQL status: BEGIN in 0.132 seconds
+[0m20:20:29.224390 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_transformed_data"
+[0m20:20:29.229444 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_transformed_data"} */
+
+  
+    
+
+  create  table "postgres"."public"."medical_transformed_data__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- Use the `ref` function to select from other models
+
+
+
+with filterd_data as (
+    select * from "postgres"."public"."medical_data"
+    
+)
+
+select 
+    message_id,
+    date,
+    extract(year from date) as year,
+    extract(month from date) as month,
+    extract(day from date) as day,  
+    sender,
+    channel,
+    text  
+from filterd_data
+  );
+  
+[0m20:20:29.309436 [debug] [Thread-1 (]: SQL status: SELECT 3979 in 0.080 seconds
+[0m20:20:29.314450 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_transformed_data"
+[0m20:20:29.314450 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_transformed_data"} */
+alter table "postgres"."public"."medical_transformed_data" rename to "medical_transformed_data__dbt_backup"
+[0m20:20:29.314450 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m20:20:29.319513 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_transformed_data"
+[0m20:20:29.319513 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_transformed_data"} */
+alter table "postgres"."public"."medical_transformed_data__dbt_tmp" rename to "medical_transformed_data"
+[0m20:20:29.324553 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m20:20:29.329656 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: COMMIT
+[0m20:20:29.329656 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_transformed_data"
+[0m20:20:29.329656 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: COMMIT
+[0m20:20:29.359675 [debug] [Thread-1 (]: SQL status: COMMIT in 0.028 seconds
+[0m20:20:29.359675 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public"."medical_transformed_data__dbt_backup"
+[0m20:20:29.364723 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_transformed_data"
+[0m20:20:29.364723 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_transformed_data"} */
+drop table if exists "postgres"."public"."medical_transformed_data__dbt_backup" cascade
+[0m20:20:29.384674 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.021 seconds
+[0m20:20:29.389241 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: Close
+[0m20:20:29.389241 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '69e6c80d-a1ea-471c-ac89-2dfb76911e2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ECACCDCF50>]}
+[0m20:20:29.389241 [info ] [Thread-1 (]: 2 of 2 OK created sql table model public.medical_transformed_data .............. [[32mSELECT 3979[0m in 0.33s]
+[0m20:20:29.396417 [debug] [Thread-1 (]: Finished running node model.Kara_dbt.medical_transformed_data
+[0m20:20:29.404419 [debug] [MainThread]: Using postgres connection "master"
+[0m20:20:29.405421 [debug] [MainThread]: On master: BEGIN
+[0m20:20:29.406420 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:20:29.539337 [debug] [MainThread]: SQL status: BEGIN in 0.138 seconds
+[0m20:20:29.539337 [debug] [MainThread]: On master: COMMIT
+[0m20:20:29.539337 [debug] [MainThread]: Using postgres connection "master"
+[0m20:20:29.539337 [debug] [MainThread]: On master: COMMIT
+[0m20:20:29.539337 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m20:20:29.539337 [debug] [MainThread]: On master: Close
+[0m20:20:29.549819 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:20:29.549819 [debug] [MainThread]: Connection 'list_postgres' was properly closed.
+[0m20:20:29.549819 [debug] [MainThread]: Connection 'list_postgres_public' was properly closed.
+[0m20:20:29.549819 [debug] [MainThread]: Connection 'model.Kara_dbt.medical_transformed_data' was properly closed.
+[0m20:20:29.549819 [info ] [MainThread]: 
+[0m20:20:29.559752 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 1.64 seconds (1.64s).
+[0m20:20:29.566375 [debug] [MainThread]: Command end result
+[0m20:20:29.645369 [info ] [MainThread]: 
+[0m20:20:29.647372 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:20:29.652376 [info ] [MainThread]: 
+[0m20:20:29.654376 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m20:20:29.658373 [debug] [MainThread]: Command `dbt run` succeeded at 20:20:29.658373 after 3.88 seconds
+[0m20:20:29.659374 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ECAA5C6AE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ECAC7AE1B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ECAB5FC320>]}
+[0m20:20:29.659374 [debug] [MainThread]: Flushing usage events
+[0m20:36:30.254328 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019DCDAA5B20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019DD0402DB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019DD01FFB30>]}
+
+
+============================== 20:36:30.259390 | 8bc42b96-022a-4287-914d-99a61d42531e ==============================
+[0m20:36:30.259390 [info ] [MainThread]: Running with dbt=1.8.7
+[0m20:36:30.259390 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Getahun\\.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'E:\\Kiffya_10_acc\\Week 7\\Kara-Solutions\\Kara_dbt\\logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt test', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:36:30.953684 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8bc42b96-022a-4287-914d-99a61d42531e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019DD059E1B0>]}
+[0m20:36:31.093776 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8bc42b96-022a-4287-914d-99a61d42531e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019DCF5AA7B0>]}
+[0m20:36:31.093776 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m20:36:31.159928 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m20:36:31.549452 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:36:31.549452 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:36:31.560454 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.Kara_dbt.example
+[0m20:36:31.718680 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8bc42b96-022a-4287-914d-99a61d42531e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019DD0B2CA70>]}
+[0m20:36:32.009155 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8bc42b96-022a-4287-914d-99a61d42531e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019DD0BB8F80>]}
+[0m20:36:32.009155 [info ] [MainThread]: Found 2 models, 6 data tests, 1 source, 423 macros
+[0m20:36:32.009155 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8bc42b96-022a-4287-914d-99a61d42531e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019DD0B2DBB0>]}
+[0m20:36:32.015897 [info ] [MainThread]: 
+[0m20:36:32.018889 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m20:36:32.031912 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres_public'
+[0m20:36:32.269284 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m20:36:32.269284 [debug] [ThreadPool]: On list_postgres_public: BEGIN
+[0m20:36:32.269284 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:36:32.509056 [debug] [ThreadPool]: SQL status: BEGIN in 0.239 seconds
+[0m20:36:32.509056 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m20:36:32.509056 [debug] [ThreadPool]: On list_postgres_public: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "connection_name": "list_postgres_public"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m20:36:32.519292 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.009 seconds
+[0m20:36:32.519292 [debug] [ThreadPool]: On list_postgres_public: ROLLBACK
+[0m20:36:32.519292 [debug] [ThreadPool]: On list_postgres_public: Close
+[0m20:36:32.539319 [debug] [MainThread]: Using postgres connection "master"
+[0m20:36:32.539319 [debug] [MainThread]: On master: BEGIN
+[0m20:36:32.539319 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:36:32.659014 [debug] [MainThread]: SQL status: BEGIN in 0.121 seconds
+[0m20:36:32.659014 [debug] [MainThread]: Using postgres connection "master"
+[0m20:36:32.659014 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m20:36:32.673933 [debug] [MainThread]: SQL status: SELECT 0 in 0.009 seconds
+[0m20:36:32.673933 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8bc42b96-022a-4287-914d-99a61d42531e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019DD011FFB0>]}
+[0m20:36:32.673933 [debug] [MainThread]: On master: ROLLBACK
+[0m20:36:32.679120 [debug] [MainThread]: Using postgres connection "master"
+[0m20:36:32.679120 [debug] [MainThread]: On master: BEGIN
+[0m20:36:32.679120 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m20:36:32.684138 [debug] [MainThread]: On master: COMMIT
+[0m20:36:32.684138 [debug] [MainThread]: Using postgres connection "master"
+[0m20:36:32.684138 [debug] [MainThread]: On master: COMMIT
+[0m20:36:32.684138 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m20:36:32.684138 [debug] [MainThread]: On master: Close
+[0m20:36:32.684138 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m20:36:32.689235 [info ] [MainThread]: 
+[0m20:36:32.702726 [debug] [Thread-1 (]: Began running node test.Kara_dbt.not_null_medical_transformed_data_channel.d05ebab8fe
+[0m20:36:32.703727 [info ] [Thread-1 (]: 1 of 6 START test not_null_medical_transformed_data_channel .................... [RUN]
+[0m20:36:32.707733 [debug] [Thread-1 (]: Acquiring new postgres connection 'test.Kara_dbt.not_null_medical_transformed_data_channel.d05ebab8fe'
+[0m20:36:32.707733 [debug] [Thread-1 (]: Began compiling node test.Kara_dbt.not_null_medical_transformed_data_channel.d05ebab8fe
+[0m20:36:32.760063 [debug] [Thread-1 (]: Writing injected SQL for node "test.Kara_dbt.not_null_medical_transformed_data_channel.d05ebab8fe"
+[0m20:36:32.764057 [debug] [Thread-1 (]: Began executing node test.Kara_dbt.not_null_medical_transformed_data_channel.d05ebab8fe
+[0m20:36:32.791063 [debug] [Thread-1 (]: Writing runtime sql for node "test.Kara_dbt.not_null_medical_transformed_data_channel.d05ebab8fe"
+[0m20:36:32.795059 [debug] [Thread-1 (]: Using postgres connection "test.Kara_dbt.not_null_medical_transformed_data_channel.d05ebab8fe"
+[0m20:36:32.796058 [debug] [Thread-1 (]: On test.Kara_dbt.not_null_medical_transformed_data_channel.d05ebab8fe: BEGIN
+[0m20:36:32.797057 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:36:32.889298 [debug] [Thread-1 (]: SQL status: BEGIN in 0.096 seconds
+[0m20:36:32.894312 [debug] [Thread-1 (]: Using postgres connection "test.Kara_dbt.not_null_medical_transformed_data_channel.d05ebab8fe"
+[0m20:36:32.894312 [debug] [Thread-1 (]: On test.Kara_dbt.not_null_medical_transformed_data_channel.d05ebab8fe: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "test.Kara_dbt.not_null_medical_transformed_data_channel.d05ebab8fe"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select channel
+from "postgres"."public"."medical_transformed_data"
+where channel is null
+
+
+
+      
+    ) dbt_internal_test
+[0m20:36:32.898912 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.005 seconds
+[0m20:36:32.903930 [debug] [Thread-1 (]: On test.Kara_dbt.not_null_medical_transformed_data_channel.d05ebab8fe: ROLLBACK
+[0m20:36:32.908996 [debug] [Thread-1 (]: On test.Kara_dbt.not_null_medical_transformed_data_channel.d05ebab8fe: Close
+[0m20:36:32.908996 [info ] [Thread-1 (]: 1 of 6 PASS not_null_medical_transformed_data_channel .......................... [[32mPASS[0m in 0.20s]
+[0m20:36:32.914010 [debug] [Thread-1 (]: Finished running node test.Kara_dbt.not_null_medical_transformed_data_channel.d05ebab8fe
+[0m20:36:32.917005 [debug] [Thread-1 (]: Began running node test.Kara_dbt.not_null_medical_transformed_data_date.7608490379
+[0m20:36:32.918004 [info ] [Thread-1 (]: 2 of 6 START test not_null_medical_transformed_data_date ....................... [RUN]
+[0m20:36:32.920262 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.Kara_dbt.not_null_medical_transformed_data_channel.d05ebab8fe, now test.Kara_dbt.not_null_medical_transformed_data_date.7608490379)
+[0m20:36:32.923261 [debug] [Thread-1 (]: Began compiling node test.Kara_dbt.not_null_medical_transformed_data_date.7608490379
+[0m20:36:32.936254 [debug] [Thread-1 (]: Writing injected SQL for node "test.Kara_dbt.not_null_medical_transformed_data_date.7608490379"
+[0m20:36:32.942257 [debug] [Thread-1 (]: Began executing node test.Kara_dbt.not_null_medical_transformed_data_date.7608490379
+[0m20:36:32.947262 [debug] [Thread-1 (]: Writing runtime sql for node "test.Kara_dbt.not_null_medical_transformed_data_date.7608490379"
+[0m20:36:32.950265 [debug] [Thread-1 (]: Using postgres connection "test.Kara_dbt.not_null_medical_transformed_data_date.7608490379"
+[0m20:36:32.951263 [debug] [Thread-1 (]: On test.Kara_dbt.not_null_medical_transformed_data_date.7608490379: BEGIN
+[0m20:36:32.951263 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:36:33.074083 [debug] [Thread-1 (]: SQL status: BEGIN in 0.123 seconds
+[0m20:36:33.074083 [debug] [Thread-1 (]: Using postgres connection "test.Kara_dbt.not_null_medical_transformed_data_date.7608490379"
+[0m20:36:33.074083 [debug] [Thread-1 (]: On test.Kara_dbt.not_null_medical_transformed_data_date.7608490379: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "test.Kara_dbt.not_null_medical_transformed_data_date.7608490379"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select date
+from "postgres"."public"."medical_transformed_data"
+where date is null
+
+
+
+      
+    ) dbt_internal_test
+[0m20:36:33.079125 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.004 seconds
+[0m20:36:33.084144 [debug] [Thread-1 (]: On test.Kara_dbt.not_null_medical_transformed_data_date.7608490379: ROLLBACK
+[0m20:36:33.084144 [debug] [Thread-1 (]: On test.Kara_dbt.not_null_medical_transformed_data_date.7608490379: Close
+[0m20:36:33.084144 [info ] [Thread-1 (]: 2 of 6 PASS not_null_medical_transformed_data_date ............................. [[32mPASS[0m in 0.16s]
+[0m20:36:33.090392 [debug] [Thread-1 (]: Finished running node test.Kara_dbt.not_null_medical_transformed_data_date.7608490379
+[0m20:36:33.092398 [debug] [Thread-1 (]: Began running node test.Kara_dbt.not_null_medical_transformed_data_message_id.4eb2a7deaf
+[0m20:36:33.094393 [info ] [Thread-1 (]: 3 of 6 START test not_null_medical_transformed_data_message_id ................. [RUN]
+[0m20:36:33.098395 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.Kara_dbt.not_null_medical_transformed_data_date.7608490379, now test.Kara_dbt.not_null_medical_transformed_data_message_id.4eb2a7deaf)
+[0m20:36:33.100393 [debug] [Thread-1 (]: Began compiling node test.Kara_dbt.not_null_medical_transformed_data_message_id.4eb2a7deaf
+[0m20:36:33.110389 [debug] [Thread-1 (]: Writing injected SQL for node "test.Kara_dbt.not_null_medical_transformed_data_message_id.4eb2a7deaf"
+[0m20:36:33.118401 [debug] [Thread-1 (]: Began executing node test.Kara_dbt.not_null_medical_transformed_data_message_id.4eb2a7deaf
+[0m20:36:33.127394 [debug] [Thread-1 (]: Writing runtime sql for node "test.Kara_dbt.not_null_medical_transformed_data_message_id.4eb2a7deaf"
+[0m20:36:33.132393 [debug] [Thread-1 (]: Using postgres connection "test.Kara_dbt.not_null_medical_transformed_data_message_id.4eb2a7deaf"
+[0m20:36:33.133392 [debug] [Thread-1 (]: On test.Kara_dbt.not_null_medical_transformed_data_message_id.4eb2a7deaf: BEGIN
+[0m20:36:33.144391 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:36:33.249003 [debug] [Thread-1 (]: SQL status: BEGIN in 0.108 seconds
+[0m20:36:33.249003 [debug] [Thread-1 (]: Using postgres connection "test.Kara_dbt.not_null_medical_transformed_data_message_id.4eb2a7deaf"
+[0m20:36:33.249003 [debug] [Thread-1 (]: On test.Kara_dbt.not_null_medical_transformed_data_message_id.4eb2a7deaf: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "test.Kara_dbt.not_null_medical_transformed_data_message_id.4eb2a7deaf"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select message_id
+from "postgres"."public"."medical_transformed_data"
+where message_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m20:36:33.249003 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.004 seconds
+[0m20:36:33.259011 [debug] [Thread-1 (]: On test.Kara_dbt.not_null_medical_transformed_data_message_id.4eb2a7deaf: ROLLBACK
+[0m20:36:33.259011 [debug] [Thread-1 (]: On test.Kara_dbt.not_null_medical_transformed_data_message_id.4eb2a7deaf: Close
+[0m20:36:33.264036 [info ] [Thread-1 (]: 3 of 6 PASS not_null_medical_transformed_data_message_id ....................... [[32mPASS[0m in 0.17s]
+[0m20:36:33.264036 [debug] [Thread-1 (]: Finished running node test.Kara_dbt.not_null_medical_transformed_data_message_id.4eb2a7deaf
+[0m20:36:33.269159 [debug] [Thread-1 (]: Began running node test.Kara_dbt.not_null_medical_transformed_data_sender.ac66b377f4
+[0m20:36:33.272177 [info ] [Thread-1 (]: 4 of 6 START test not_null_medical_transformed_data_sender ..................... [RUN]
+[0m20:36:33.277175 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.Kara_dbt.not_null_medical_transformed_data_message_id.4eb2a7deaf, now test.Kara_dbt.not_null_medical_transformed_data_sender.ac66b377f4)
+[0m20:36:33.279179 [debug] [Thread-1 (]: Began compiling node test.Kara_dbt.not_null_medical_transformed_data_sender.ac66b377f4
+[0m20:36:33.295174 [debug] [Thread-1 (]: Writing injected SQL for node "test.Kara_dbt.not_null_medical_transformed_data_sender.ac66b377f4"
+[0m20:36:33.299178 [debug] [Thread-1 (]: Began executing node test.Kara_dbt.not_null_medical_transformed_data_sender.ac66b377f4
+[0m20:36:33.303172 [debug] [Thread-1 (]: Writing runtime sql for node "test.Kara_dbt.not_null_medical_transformed_data_sender.ac66b377f4"
+[0m20:36:33.309176 [debug] [Thread-1 (]: Using postgres connection "test.Kara_dbt.not_null_medical_transformed_data_sender.ac66b377f4"
+[0m20:36:33.310173 [debug] [Thread-1 (]: On test.Kara_dbt.not_null_medical_transformed_data_sender.ac66b377f4: BEGIN
+[0m20:36:33.311182 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:36:33.444177 [debug] [Thread-1 (]: SQL status: BEGIN in 0.135 seconds
+[0m20:36:33.444177 [debug] [Thread-1 (]: Using postgres connection "test.Kara_dbt.not_null_medical_transformed_data_sender.ac66b377f4"
+[0m20:36:33.449240 [debug] [Thread-1 (]: On test.Kara_dbt.not_null_medical_transformed_data_sender.ac66b377f4: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "test.Kara_dbt.not_null_medical_transformed_data_sender.ac66b377f4"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select sender
+from "postgres"."public"."medical_transformed_data"
+where sender is null
+
+
+
+      
+    ) dbt_internal_test
+[0m20:36:33.449240 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.004 seconds
+[0m20:36:33.454260 [debug] [Thread-1 (]: On test.Kara_dbt.not_null_medical_transformed_data_sender.ac66b377f4: ROLLBACK
+[0m20:36:33.454260 [debug] [Thread-1 (]: On test.Kara_dbt.not_null_medical_transformed_data_sender.ac66b377f4: Close
+[0m20:36:33.459317 [info ] [Thread-1 (]: 4 of 6 PASS not_null_medical_transformed_data_sender ........................... [[32mPASS[0m in 0.18s]
+[0m20:36:33.463679 [debug] [Thread-1 (]: Finished running node test.Kara_dbt.not_null_medical_transformed_data_sender.ac66b377f4
+[0m20:36:33.465674 [debug] [Thread-1 (]: Began running node test.Kara_dbt.not_null_medical_transformed_data_text.84b969f7bf
+[0m20:36:33.469686 [info ] [Thread-1 (]: 5 of 6 START test not_null_medical_transformed_data_text ....................... [RUN]
+[0m20:36:33.473674 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.Kara_dbt.not_null_medical_transformed_data_sender.ac66b377f4, now test.Kara_dbt.not_null_medical_transformed_data_text.84b969f7bf)
+[0m20:36:33.476679 [debug] [Thread-1 (]: Began compiling node test.Kara_dbt.not_null_medical_transformed_data_text.84b969f7bf
+[0m20:36:33.490678 [debug] [Thread-1 (]: Writing injected SQL for node "test.Kara_dbt.not_null_medical_transformed_data_text.84b969f7bf"
+[0m20:36:33.494677 [debug] [Thread-1 (]: Began executing node test.Kara_dbt.not_null_medical_transformed_data_text.84b969f7bf
+[0m20:36:33.504675 [debug] [Thread-1 (]: Writing runtime sql for node "test.Kara_dbt.not_null_medical_transformed_data_text.84b969f7bf"
+[0m20:36:33.512700 [debug] [Thread-1 (]: Using postgres connection "test.Kara_dbt.not_null_medical_transformed_data_text.84b969f7bf"
+[0m20:36:33.513673 [debug] [Thread-1 (]: On test.Kara_dbt.not_null_medical_transformed_data_text.84b969f7bf: BEGIN
+[0m20:36:33.514678 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:36:33.619285 [debug] [Thread-1 (]: SQL status: BEGIN in 0.109 seconds
+[0m20:36:33.619285 [debug] [Thread-1 (]: Using postgres connection "test.Kara_dbt.not_null_medical_transformed_data_text.84b969f7bf"
+[0m20:36:33.619285 [debug] [Thread-1 (]: On test.Kara_dbt.not_null_medical_transformed_data_text.84b969f7bf: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "test.Kara_dbt.not_null_medical_transformed_data_text.84b969f7bf"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select text
+from "postgres"."public"."medical_transformed_data"
+where text is null
+
+
+
+      
+    ) dbt_internal_test
+[0m20:36:33.628909 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.005 seconds
+[0m20:36:33.633932 [debug] [Thread-1 (]: On test.Kara_dbt.not_null_medical_transformed_data_text.84b969f7bf: ROLLBACK
+[0m20:36:33.633932 [debug] [Thread-1 (]: On test.Kara_dbt.not_null_medical_transformed_data_text.84b969f7bf: Close
+[0m20:36:33.633932 [info ] [Thread-1 (]: 5 of 6 PASS not_null_medical_transformed_data_text ............................. [[32mPASS[0m in 0.16s]
+[0m20:36:33.638990 [debug] [Thread-1 (]: Finished running node test.Kara_dbt.not_null_medical_transformed_data_text.84b969f7bf
+[0m20:36:33.642366 [debug] [Thread-1 (]: Began running node test.Kara_dbt.unique_medical_transformed_data_message_id.cdd0fb94d0
+[0m20:36:33.644365 [info ] [Thread-1 (]: 6 of 6 START test unique_medical_transformed_data_message_id ................... [RUN]
+[0m20:36:33.648367 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.Kara_dbt.not_null_medical_transformed_data_text.84b969f7bf, now test.Kara_dbt.unique_medical_transformed_data_message_id.cdd0fb94d0)
+[0m20:36:33.650368 [debug] [Thread-1 (]: Began compiling node test.Kara_dbt.unique_medical_transformed_data_message_id.cdd0fb94d0
+[0m20:36:33.674366 [debug] [Thread-1 (]: Writing injected SQL for node "test.Kara_dbt.unique_medical_transformed_data_message_id.cdd0fb94d0"
+[0m20:36:33.678369 [debug] [Thread-1 (]: Began executing node test.Kara_dbt.unique_medical_transformed_data_message_id.cdd0fb94d0
+[0m20:36:33.686362 [debug] [Thread-1 (]: Writing runtime sql for node "test.Kara_dbt.unique_medical_transformed_data_message_id.cdd0fb94d0"
+[0m20:36:33.690366 [debug] [Thread-1 (]: Using postgres connection "test.Kara_dbt.unique_medical_transformed_data_message_id.cdd0fb94d0"
+[0m20:36:33.691368 [debug] [Thread-1 (]: On test.Kara_dbt.unique_medical_transformed_data_message_id.cdd0fb94d0: BEGIN
+[0m20:36:33.694378 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:36:33.899106 [debug] [Thread-1 (]: SQL status: BEGIN in 0.209 seconds
+[0m20:36:33.904122 [debug] [Thread-1 (]: Using postgres connection "test.Kara_dbt.unique_medical_transformed_data_message_id.cdd0fb94d0"
+[0m20:36:33.904122 [debug] [Thread-1 (]: On test.Kara_dbt.unique_medical_transformed_data_message_id.cdd0fb94d0: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "test.Kara_dbt.unique_medical_transformed_data_message_id.cdd0fb94d0"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    message_id as unique_field,
+    count(*) as n_records
+
+from "postgres"."public"."medical_transformed_data"
+where message_id is not null
+group by message_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m20:36:33.909177 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.007 seconds
+[0m20:36:33.914191 [debug] [Thread-1 (]: On test.Kara_dbt.unique_medical_transformed_data_message_id.cdd0fb94d0: ROLLBACK
+[0m20:36:33.914191 [debug] [Thread-1 (]: On test.Kara_dbt.unique_medical_transformed_data_message_id.cdd0fb94d0: Close
+[0m20:36:33.914191 [info ] [Thread-1 (]: 6 of 6 PASS unique_medical_transformed_data_message_id ......................... [[32mPASS[0m in 0.27s]
+[0m20:36:33.919242 [debug] [Thread-1 (]: Finished running node test.Kara_dbt.unique_medical_transformed_data_message_id.cdd0fb94d0
+[0m20:36:33.922305 [debug] [MainThread]: Using postgres connection "master"
+[0m20:36:33.922305 [debug] [MainThread]: On master: BEGIN
+[0m20:36:33.922305 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:36:34.049225 [debug] [MainThread]: SQL status: BEGIN in 0.121 seconds
+[0m20:36:34.049225 [debug] [MainThread]: On master: COMMIT
+[0m20:36:34.049225 [debug] [MainThread]: Using postgres connection "master"
+[0m20:36:34.049225 [debug] [MainThread]: On master: COMMIT
+[0m20:36:34.049225 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m20:36:34.054240 [debug] [MainThread]: On master: Close
+[0m20:36:34.054240 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:36:34.054240 [debug] [MainThread]: Connection 'list_postgres_public' was properly closed.
+[0m20:36:34.054240 [debug] [MainThread]: Connection 'test.Kara_dbt.unique_medical_transformed_data_message_id.cdd0fb94d0' was properly closed.
+[0m20:36:34.058756 [info ] [MainThread]: 
+[0m20:36:34.058797 [info ] [MainThread]: Finished running 6 data tests in 0 hours 0 minutes and 2.04 seconds (2.04s).
+[0m20:36:34.071532 [debug] [MainThread]: Command end result
+[0m20:36:34.168531 [info ] [MainThread]: 
+[0m20:36:34.171627 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:36:34.174509 [info ] [MainThread]: 
+[0m20:36:34.180518 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=0 SKIP=0 TOTAL=6
+[0m20:36:34.191512 [debug] [MainThread]: Command `dbt test` succeeded at 20:36:34.191512 after 4.33 seconds
+[0m20:36:34.199518 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019DCF85AD50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019DCFCB1220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019DCDAA5B20>]}
+[0m20:36:34.201506 [debug] [MainThread]: Flushing usage events
+[0m20:37:03.463940 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029A2EC24B00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029A2E6A5460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029A2E6A4980>]}
+
+
+============================== 20:37:03.468993 | 74caec72-ac83-4e45-8b09-079207b7f34e ==============================
+[0m20:37:03.468993 [info ] [MainThread]: Running with dbt=1.8.7
+[0m20:37:03.474007 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Getahun\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'E:\\Kiffya_10_acc\\Week 7\\Kara-Solutions\\Kara_dbt\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt docs generate', 'send_anonymous_usage_stats': 'True'}
+[0m20:37:03.958677 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '74caec72-ac83-4e45-8b09-079207b7f34e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029A2EEF9700>]}
+[0m20:37:04.074390 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '74caec72-ac83-4e45-8b09-079207b7f34e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029A2EAA6900>]}
+[0m20:37:04.076391 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m20:37:04.104397 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m20:37:04.433960 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:37:04.433960 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:37:04.444073 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.Kara_dbt.example
+[0m20:37:04.538704 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '74caec72-ac83-4e45-8b09-079207b7f34e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029A2F53DFD0>]}
+[0m20:37:04.637097 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '74caec72-ac83-4e45-8b09-079207b7f34e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029A307440E0>]}
+[0m20:37:04.637097 [info ] [MainThread]: Found 2 models, 6 data tests, 1 source, 423 macros
+[0m20:37:04.639088 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '74caec72-ac83-4e45-8b09-079207b7f34e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029A30727F20>]}
+[0m20:37:04.643113 [info ] [MainThread]: 
+[0m20:37:04.647092 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m20:37:04.663088 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres_public'
+[0m20:37:04.908835 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m20:37:04.913853 [debug] [ThreadPool]: On list_postgres_public: BEGIN
+[0m20:37:04.913853 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:37:05.038984 [debug] [ThreadPool]: SQL status: BEGIN in 0.128 seconds
+[0m20:37:05.038984 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m20:37:05.038984 [debug] [ThreadPool]: On list_postgres_public: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "connection_name": "list_postgres_public"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m20:37:05.049327 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.008 seconds
+[0m20:37:05.053869 [debug] [ThreadPool]: On list_postgres_public: ROLLBACK
+[0m20:37:05.053869 [debug] [ThreadPool]: On list_postgres_public: Close
+[0m20:37:05.071207 [debug] [MainThread]: Using postgres connection "master"
+[0m20:37:05.072208 [debug] [MainThread]: On master: BEGIN
+[0m20:37:05.073207 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:37:05.194278 [debug] [MainThread]: SQL status: BEGIN in 0.125 seconds
+[0m20:37:05.198844 [debug] [MainThread]: Using postgres connection "master"
+[0m20:37:05.198844 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m20:37:05.209125 [debug] [MainThread]: SQL status: SELECT 0 in 0.009 seconds
+[0m20:37:05.209125 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '74caec72-ac83-4e45-8b09-079207b7f34e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029A2F565070>]}
+[0m20:37:05.209125 [debug] [MainThread]: On master: ROLLBACK
+[0m20:37:05.209125 [debug] [MainThread]: On master: Close
+[0m20:37:05.209125 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m20:37:05.209125 [info ] [MainThread]: 
+[0m20:37:05.231835 [debug] [Thread-1 (]: Began running node model.Kara_dbt.medical_data
+[0m20:37:05.233836 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.Kara_dbt.medical_data'
+[0m20:37:05.234837 [debug] [Thread-1 (]: Began compiling node model.Kara_dbt.medical_data
+[0m20:37:05.254855 [debug] [Thread-1 (]: Writing injected SQL for node "model.Kara_dbt.medical_data"
+[0m20:37:05.258834 [debug] [Thread-1 (]: Began executing node model.Kara_dbt.medical_data
+[0m20:37:05.260836 [debug] [Thread-1 (]: Finished running node model.Kara_dbt.medical_data
+[0m20:37:05.261856 [debug] [Thread-1 (]: Began running node model.Kara_dbt.medical_transformed_data
+[0m20:37:05.267834 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.Kara_dbt.medical_data, now model.Kara_dbt.medical_transformed_data)
+[0m20:37:05.268834 [debug] [Thread-1 (]: Began compiling node model.Kara_dbt.medical_transformed_data
+[0m20:37:05.274836 [debug] [Thread-1 (]: Writing injected SQL for node "model.Kara_dbt.medical_transformed_data"
+[0m20:37:05.276835 [debug] [Thread-1 (]: Began executing node model.Kara_dbt.medical_transformed_data
+[0m20:37:05.280836 [debug] [Thread-1 (]: Finished running node model.Kara_dbt.medical_transformed_data
+[0m20:37:05.283833 [debug] [Thread-1 (]: Began running node test.Kara_dbt.not_null_medical_transformed_data_channel.d05ebab8fe
+[0m20:37:05.284835 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.Kara_dbt.medical_transformed_data, now test.Kara_dbt.not_null_medical_transformed_data_channel.d05ebab8fe)
+[0m20:37:05.285834 [debug] [Thread-1 (]: Began compiling node test.Kara_dbt.not_null_medical_transformed_data_channel.d05ebab8fe
+[0m20:37:05.307835 [debug] [Thread-1 (]: Writing injected SQL for node "test.Kara_dbt.not_null_medical_transformed_data_channel.d05ebab8fe"
+[0m20:37:05.310839 [debug] [Thread-1 (]: Began executing node test.Kara_dbt.not_null_medical_transformed_data_channel.d05ebab8fe
+[0m20:37:05.311839 [debug] [Thread-1 (]: Finished running node test.Kara_dbt.not_null_medical_transformed_data_channel.d05ebab8fe
+[0m20:37:05.312838 [debug] [Thread-1 (]: Began running node test.Kara_dbt.not_null_medical_transformed_data_date.7608490379
+[0m20:37:05.313837 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.Kara_dbt.not_null_medical_transformed_data_channel.d05ebab8fe, now test.Kara_dbt.not_null_medical_transformed_data_date.7608490379)
+[0m20:37:05.314837 [debug] [Thread-1 (]: Began compiling node test.Kara_dbt.not_null_medical_transformed_data_date.7608490379
+[0m20:37:05.322832 [debug] [Thread-1 (]: Writing injected SQL for node "test.Kara_dbt.not_null_medical_transformed_data_date.7608490379"
+[0m20:37:05.324839 [debug] [Thread-1 (]: Began executing node test.Kara_dbt.not_null_medical_transformed_data_date.7608490379
+[0m20:37:05.326832 [debug] [Thread-1 (]: Finished running node test.Kara_dbt.not_null_medical_transformed_data_date.7608490379
+[0m20:37:05.327834 [debug] [Thread-1 (]: Began running node test.Kara_dbt.not_null_medical_transformed_data_message_id.4eb2a7deaf
+[0m20:37:05.327834 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.Kara_dbt.not_null_medical_transformed_data_date.7608490379, now test.Kara_dbt.not_null_medical_transformed_data_message_id.4eb2a7deaf)
+[0m20:37:05.328893 [debug] [Thread-1 (]: Began compiling node test.Kara_dbt.not_null_medical_transformed_data_message_id.4eb2a7deaf
+[0m20:37:05.337088 [debug] [Thread-1 (]: Writing injected SQL for node "test.Kara_dbt.not_null_medical_transformed_data_message_id.4eb2a7deaf"
+[0m20:37:05.341109 [debug] [Thread-1 (]: Began executing node test.Kara_dbt.not_null_medical_transformed_data_message_id.4eb2a7deaf
+[0m20:37:05.342108 [debug] [Thread-1 (]: Finished running node test.Kara_dbt.not_null_medical_transformed_data_message_id.4eb2a7deaf
+[0m20:37:05.343109 [debug] [Thread-1 (]: Began running node test.Kara_dbt.not_null_medical_transformed_data_sender.ac66b377f4
+[0m20:37:05.344086 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.Kara_dbt.not_null_medical_transformed_data_message_id.4eb2a7deaf, now test.Kara_dbt.not_null_medical_transformed_data_sender.ac66b377f4)
+[0m20:37:05.345110 [debug] [Thread-1 (]: Began compiling node test.Kara_dbt.not_null_medical_transformed_data_sender.ac66b377f4
+[0m20:37:05.352110 [debug] [Thread-1 (]: Writing injected SQL for node "test.Kara_dbt.not_null_medical_transformed_data_sender.ac66b377f4"
+[0m20:37:05.355085 [debug] [Thread-1 (]: Began executing node test.Kara_dbt.not_null_medical_transformed_data_sender.ac66b377f4
+[0m20:37:05.356087 [debug] [Thread-1 (]: Finished running node test.Kara_dbt.not_null_medical_transformed_data_sender.ac66b377f4
+[0m20:37:05.357086 [debug] [Thread-1 (]: Began running node test.Kara_dbt.not_null_medical_transformed_data_text.84b969f7bf
+[0m20:37:05.358086 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.Kara_dbt.not_null_medical_transformed_data_sender.ac66b377f4, now test.Kara_dbt.not_null_medical_transformed_data_text.84b969f7bf)
+[0m20:37:05.359086 [debug] [Thread-1 (]: Began compiling node test.Kara_dbt.not_null_medical_transformed_data_text.84b969f7bf
+[0m20:37:05.361049 [debug] [Thread-1 (]: Writing injected SQL for node "test.Kara_dbt.not_null_medical_transformed_data_text.84b969f7bf"
+[0m20:37:05.361049 [debug] [Thread-1 (]: Began executing node test.Kara_dbt.not_null_medical_transformed_data_text.84b969f7bf
+[0m20:37:05.369112 [debug] [Thread-1 (]: Finished running node test.Kara_dbt.not_null_medical_transformed_data_text.84b969f7bf
+[0m20:37:05.369112 [debug] [Thread-1 (]: Began running node test.Kara_dbt.unique_medical_transformed_data_message_id.cdd0fb94d0
+[0m20:37:05.369112 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.Kara_dbt.not_null_medical_transformed_data_text.84b969f7bf, now test.Kara_dbt.unique_medical_transformed_data_message_id.cdd0fb94d0)
+[0m20:37:05.369112 [debug] [Thread-1 (]: Began compiling node test.Kara_dbt.unique_medical_transformed_data_message_id.cdd0fb94d0
+[0m20:37:05.383843 [debug] [Thread-1 (]: Writing injected SQL for node "test.Kara_dbt.unique_medical_transformed_data_message_id.cdd0fb94d0"
+[0m20:37:05.386845 [debug] [Thread-1 (]: Began executing node test.Kara_dbt.unique_medical_transformed_data_message_id.cdd0fb94d0
+[0m20:37:05.387844 [debug] [Thread-1 (]: Finished running node test.Kara_dbt.unique_medical_transformed_data_message_id.cdd0fb94d0
+[0m20:37:05.389846 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:37:05.390854 [debug] [MainThread]: Connection 'list_postgres_public' was properly closed.
+[0m20:37:05.391843 [debug] [MainThread]: Connection 'test.Kara_dbt.unique_medical_transformed_data_message_id.cdd0fb94d0' was properly closed.
+[0m20:37:05.395847 [debug] [MainThread]: Command end result
+[0m20:37:05.629246 [debug] [MainThread]: Acquiring new postgres connection 'generate_catalog'
+[0m20:37:05.629246 [info ] [MainThread]: Building catalog
+[0m20:37:05.654464 [debug] [ThreadPool]: Acquiring new postgres connection 'postgres.information_schema'
+[0m20:37:05.670480 [debug] [ThreadPool]: Using postgres connection "postgres.information_schema"
+[0m20:37:05.671481 [debug] [ThreadPool]: On postgres.information_schema: BEGIN
+[0m20:37:05.672480 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:37:05.779010 [debug] [ThreadPool]: SQL status: BEGIN in 0.107 seconds
+[0m20:37:05.780011 [debug] [ThreadPool]: Using postgres connection "postgres.information_schema"
+[0m20:37:05.781012 [debug] [ThreadPool]: On postgres.information_schema: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "connection_name": "postgres.information_schema"} */
+
+    
+    
+
+    select
+        'postgres' as table_database,
+        sch.nspname as table_schema,
+        tbl.relname as table_name,
+        case tbl.relkind
+            when 'v' then 'VIEW'
+            when 'm' then 'MATERIALIZED VIEW'
+            else 'BASE TABLE'
+        end as table_type,
+        tbl_desc.description as table_comment,
+        col.attname as column_name,
+        col.attnum as column_index,
+        pg_catalog.format_type(col.atttypid, col.atttypmod) as column_type,
+        col_desc.description as column_comment,
+        pg_get_userbyid(tbl.relowner) as table_owner
+
+    from pg_catalog.pg_namespace sch
+    join pg_catalog.pg_class tbl on tbl.relnamespace = sch.oid
+    join pg_catalog.pg_attribute col on col.attrelid = tbl.oid
+    left outer join pg_catalog.pg_description tbl_desc on (tbl_desc.objoid = tbl.oid and tbl_desc.objsubid = 0)
+    left outer join pg_catalog.pg_description col_desc on (col_desc.objoid = tbl.oid and col_desc.objsubid = col.attnum)
+    where ((upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('medical_data')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('medical_transformed_data')))
+      and not pg_is_other_temp_schema(sch.oid) -- not a temporary schema belonging to another session
+      and tbl.relpersistence in ('p', 'u') -- [p]ermanent table or [u]nlogged table. Exclude [t]emporary tables
+      and tbl.relkind in ('r', 'v', 'f', 'p', 'm') -- o[r]dinary table, [v]iew, [f]oreign table, [p]artitioned table, [m]aterialized view. Other values are [i]ndex, [S]equence, [c]omposite type, [t]OAST table
+      and col.attnum > 0 -- negative numbers are used for system columns such as oid
+      and not col.attisdropped -- column as not been dropped
+
+    order by
+        sch.nspname,
+        tbl.relname,
+        col.attnum
+[0m20:37:05.853012 [debug] [ThreadPool]: SQL status: SELECT 14 in 0.071 seconds
+[0m20:37:05.876034 [debug] [ThreadPool]: On postgres.information_schema: ROLLBACK
+[0m20:37:05.878010 [debug] [ThreadPool]: On postgres.information_schema: Close
+[0m20:37:05.968959 [info ] [MainThread]: Catalog written to E:\Kiffya_10_acc\Week 7\Kara-Solutions\Kara_dbt\target\catalog.json
+[0m20:37:05.972961 [debug] [MainThread]: Command `dbt docs generate` succeeded at 20:37:05.972961 after 2.78 seconds
+[0m20:37:05.973957 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m20:37:05.974958 [debug] [MainThread]: Connection 'postgres.information_schema' was properly closed.
+[0m20:37:05.975958 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029A2EAEDD00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029A2EEF9D60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029A2E9C7FE0>]}
+[0m20:37:05.975958 [debug] [MainThread]: Flushing usage events
+[0m20:37:21.425762 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000166C8D6BC20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000166C8D68740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000166C815B800>]}
+
+
+============================== 20:37:21.433758 | 9594d5f8-20f2-45e2-9384-0b2645f48802 ==============================
+[0m20:37:21.433758 [info ] [MainThread]: Running with dbt=1.8.7
+[0m20:37:21.435765 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\Getahun\\.dbt', 'log_path': 'E:\\Kiffya_10_acc\\Week 7\\Kara-Solutions\\Kara_dbt\\logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt docs serve', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m20:37:21.888904 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9594d5f8-20f2-45e2-9384-0b2645f48802', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000166C8EB8D70>]}
+[0m20:37:21.978910 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9594d5f8-20f2-45e2-9384-0b2645f48802', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000166C8B8BFE0>]}
+[0m21:26:30.607653 [error] [MainThread]: Encountered an error:
+
+[0m21:26:30.738638 [error] [MainThread]: Traceback (most recent call last):
+  File "E:\Kiffya_10_acc\Week 7\Kara-Solutions\.venv\Lib\site-packages\dbt\cli\requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Kiffya_10_acc\Week 7\Kara-Solutions\.venv\Lib\site-packages\dbt\cli\requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Kiffya_10_acc\Week 7\Kara-Solutions\.venv\Lib\site-packages\dbt\cli\requires.py", line 218, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Kiffya_10_acc\Week 7\Kara-Solutions\.venv\Lib\site-packages\dbt\cli\requires.py", line 247, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Kiffya_10_acc\Week 7\Kara-Solutions\.venv\Lib\site-packages\dbt\cli\requires.py", line 294, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Kiffya_10_acc\Week 7\Kara-Solutions\.venv\Lib\site-packages\dbt\cli\main.py", line 303, in docs_serve
+    results = task.run()
+              ^^^^^^^^^^
+  File "E:\Kiffya_10_acc\Week 7\Kara-Solutions\.venv\Lib\site-packages\dbt\task\docs\serve.py", line 29, in run
+    httpd.serve_forever()
+  File "C:\Users\Getahun\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 235, in serve_forever
+    ready = selector.select(poll_interval)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Getahun\AppData\Local\Programs\Python\Python312\Lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Getahun\AppData\Local\Programs\Python\Python312\Lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+[0m21:26:30.778509 [debug] [MainThread]: Command `dbt docs serve` failed at 21:26:30.774505 after 2949.59 seconds
+[0m21:26:30.788506 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000166C85AA660>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000166C8FB7E90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000166C8D40080>]}
+[0m21:26:30.800503 [debug] [MainThread]: Flushing usage events
+[0m21:42:56.502256 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7E54D09B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7E5C49100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7E5CBC9B0>]}
+
+
+============================== 21:42:56.542100 | f7b4efc1-247d-460e-9385-088ab52345f8 ==============================
+[0m21:42:56.542100 [info ] [MainThread]: Running with dbt=1.8.7
+[0m21:42:56.562278 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Getahun\\.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'E:\\Kiffya_10_acc\\Week 7\\Kara-Solutions\\Kara_dbt\\logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m21:42:57.737270 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f7b4efc1-247d-460e-9385-088ab52345f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7E5DF50A0>]}
+[0m21:42:57.882448 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f7b4efc1-247d-460e-9385-088ab52345f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7E59DDDF0>]}
+[0m21:42:57.886986 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m21:42:57.906536 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m21:42:58.532178 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m21:42:58.532178 [debug] [MainThread]: Partial parsing: updated file: Kara_dbt://models\medical_transformed_data.sql
+[0m21:42:59.421967 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.Kara_dbt.example
+[0m21:42:59.464886 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f7b4efc1-247d-460e-9385-088ab52345f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7E7713830>]}
+[0m21:42:59.872031 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f7b4efc1-247d-460e-9385-088ab52345f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7E77BBC20>]}
+[0m21:42:59.872031 [info ] [MainThread]: Found 2 models, 6 data tests, 1 source, 423 macros
+[0m21:42:59.872031 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f7b4efc1-247d-460e-9385-088ab52345f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7E5E96930>]}
+[0m21:42:59.882774 [info ] [MainThread]: 
+[0m21:42:59.884770 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m21:42:59.902769 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m21:43:00.251908 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m21:43:00.251908 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m21:43:00.251908 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:43:00.497104 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.246 seconds
+[0m21:43:00.502113 [debug] [ThreadPool]: On list_postgres: Close
+[0m21:43:00.507165 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres_public'
+[0m21:43:00.532370 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m21:43:00.536966 [debug] [ThreadPool]: On list_postgres_public: BEGIN
+[0m21:43:00.536966 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:43:00.697036 [debug] [ThreadPool]: SQL status: BEGIN in 0.158 seconds
+[0m21:43:00.697036 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m21:43:00.697036 [debug] [ThreadPool]: On list_postgres_public: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "connection_name": "list_postgres_public"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m21:43:00.737311 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.038 seconds
+[0m21:43:00.742324 [debug] [ThreadPool]: On list_postgres_public: ROLLBACK
+[0m21:43:00.761985 [debug] [ThreadPool]: On list_postgres_public: Close
+[0m21:43:00.782238 [debug] [MainThread]: Using postgres connection "master"
+[0m21:43:00.782238 [debug] [MainThread]: On master: BEGIN
+[0m21:43:00.787291 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:43:00.947324 [debug] [MainThread]: SQL status: BEGIN in 0.161 seconds
+[0m21:43:00.947324 [debug] [MainThread]: Using postgres connection "master"
+[0m21:43:00.947324 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m21:43:01.135461 [debug] [MainThread]: SQL status: SELECT 0 in 0.182 seconds
+[0m21:43:01.140459 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f7b4efc1-247d-460e-9385-088ab52345f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7E77DBAD0>]}
+[0m21:43:01.142462 [debug] [MainThread]: On master: ROLLBACK
+[0m21:43:01.144459 [debug] [MainThread]: Using postgres connection "master"
+[0m21:43:01.145457 [debug] [MainThread]: On master: BEGIN
+[0m21:43:01.147461 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m21:43:01.149461 [debug] [MainThread]: On master: COMMIT
+[0m21:43:01.150464 [debug] [MainThread]: Using postgres connection "master"
+[0m21:43:01.151463 [debug] [MainThread]: On master: COMMIT
+[0m21:43:01.153100 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m21:43:01.153100 [debug] [MainThread]: On master: Close
+[0m21:43:01.157148 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:43:01.162168 [info ] [MainThread]: 
+[0m21:43:01.252680 [debug] [Thread-1 (]: Began running node model.Kara_dbt.medical_data
+[0m21:43:01.254689 [info ] [Thread-1 (]: 1 of 2 START sql table model public.medical_data ............................... [RUN]
+[0m21:43:01.257682 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.Kara_dbt.medical_data'
+[0m21:43:01.259682 [debug] [Thread-1 (]: Began compiling node model.Kara_dbt.medical_data
+[0m21:43:01.298684 [debug] [Thread-1 (]: Writing injected SQL for node "model.Kara_dbt.medical_data"
+[0m21:43:01.308681 [debug] [Thread-1 (]: Began executing node model.Kara_dbt.medical_data
+[0m21:43:01.501999 [debug] [Thread-1 (]: Writing runtime sql for node "model.Kara_dbt.medical_data"
+[0m21:43:01.504066 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_data"
+[0m21:43:01.507126 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: BEGIN
+[0m21:43:01.507126 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m21:43:01.669661 [debug] [Thread-1 (]: SQL status: BEGIN in 0.160 seconds
+[0m21:43:01.671662 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_data"
+[0m21:43:01.672662 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_data"} */
+
+  
+    
+
+  create  table "postgres"."public"."medical_data__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+select * 
+from public.medical_data
+  );
+  
+[0m21:43:01.886685 [debug] [Thread-1 (]: SQL status: SELECT 3979 in 0.212 seconds
+[0m21:43:01.897679 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_data"
+[0m21:43:01.899688 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_data"} */
+alter table "postgres"."public"."medical_data" rename to "medical_data__dbt_backup"
+[0m21:43:01.917012 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.021 seconds
+[0m21:43:01.932228 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_data"
+[0m21:43:01.932228 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_data"} */
+alter table "postgres"."public"."medical_data__dbt_tmp" rename to "medical_data"
+[0m21:43:01.932228 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m21:43:01.977431 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: COMMIT
+[0m21:43:01.979497 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_data"
+[0m21:43:01.979497 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: COMMIT
+[0m21:43:01.997187 [debug] [Thread-1 (]: SQL status: COMMIT in 0.020 seconds
+[0m21:43:02.015879 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public"."medical_data__dbt_backup"
+[0m21:43:02.030875 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_data"
+[0m21:43:02.032877 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_data"} */
+drop table if exists "postgres"."public"."medical_data__dbt_backup" cascade
+[0m21:43:02.062020 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.032 seconds
+[0m21:43:02.072089 [debug] [Thread-1 (]: On model.Kara_dbt.medical_data: Close
+[0m21:43:02.077157 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f7b4efc1-247d-460e-9385-088ab52345f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7E37FF050>]}
+[0m21:43:02.079716 [info ] [Thread-1 (]: 1 of 2 OK created sql table model public.medical_data .......................... [[32mSELECT 3979[0m in 0.82s]
+[0m21:43:02.079716 [debug] [Thread-1 (]: Finished running node model.Kara_dbt.medical_data
+[0m21:43:02.086144 [debug] [Thread-1 (]: Began running node model.Kara_dbt.medical_transformed_data
+[0m21:43:02.087988 [info ] [Thread-1 (]: 2 of 2 START sql table model public.medical_transformed_data ................... [RUN]
+[0m21:43:02.087988 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.Kara_dbt.medical_data, now model.Kara_dbt.medical_transformed_data)
+[0m21:43:02.092008 [debug] [Thread-1 (]: Began compiling node model.Kara_dbt.medical_transformed_data
+[0m21:43:02.102089 [debug] [Thread-1 (]: Writing injected SQL for node "model.Kara_dbt.medical_transformed_data"
+[0m21:43:02.107144 [debug] [Thread-1 (]: Began executing node model.Kara_dbt.medical_transformed_data
+[0m21:43:02.117214 [debug] [Thread-1 (]: Writing runtime sql for node "model.Kara_dbt.medical_transformed_data"
+[0m21:43:02.122226 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_transformed_data"
+[0m21:43:02.122226 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: BEGIN
+[0m21:43:02.127299 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:43:02.307432 [debug] [Thread-1 (]: SQL status: BEGIN in 0.181 seconds
+[0m21:43:02.307432 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_transformed_data"
+[0m21:43:02.311480 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_transformed_data"} */
+
+  
+    
+
+  create  table "postgres"."public"."medical_transformed_data__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- Use the `ref` function to select from other models
+
+
+
+with filterd_data as (
+    select * from "postgres"."public"."medical_data"
+    
+)
+
+select 
+    concat(channel, '_', message_id) as message_id,  -- Concatenate channel and message_id,
+    date,
+    extract(year from date) as year,
+    extract(month from date) as month,
+    extract(day from date) as day,  
+    sender,
+    channel,
+    text  
+from filterd_data
+  );
+  
+[0m21:43:02.700838 [debug] [Thread-1 (]: SQL status: SELECT 3979 in 0.388 seconds
+[0m21:43:02.711848 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_transformed_data"
+[0m21:43:02.713834 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_transformed_data"} */
+alter table "postgres"."public"."medical_transformed_data" rename to "medical_transformed_data__dbt_backup"
+[0m21:43:02.716832 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:43:02.724092 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_transformed_data"
+[0m21:43:02.725095 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_transformed_data"} */
+alter table "postgres"."public"."medical_transformed_data__dbt_tmp" rename to "medical_transformed_data"
+[0m21:43:02.729093 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m21:43:02.736096 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: COMMIT
+[0m21:43:02.736096 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_transformed_data"
+[0m21:43:02.737094 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: COMMIT
+[0m21:43:02.786977 [debug] [Thread-1 (]: SQL status: COMMIT in 0.055 seconds
+[0m21:43:02.796989 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public"."medical_transformed_data__dbt_backup"
+[0m21:43:02.802001 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.medical_transformed_data"
+[0m21:43:02.802001 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.medical_transformed_data"} */
+drop table if exists "postgres"."public"."medical_transformed_data__dbt_backup" cascade
+[0m21:43:02.816988 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.012 seconds
+[0m21:43:02.822000 [debug] [Thread-1 (]: On model.Kara_dbt.medical_transformed_data: Close
+[0m21:43:02.822000 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f7b4efc1-247d-460e-9385-088ab52345f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7E7B417C0>]}
+[0m21:43:02.827054 [info ] [Thread-1 (]: 2 of 2 OK created sql table model public.medical_transformed_data .............. [[32mSELECT 3979[0m in 0.73s]
+[0m21:43:02.827054 [debug] [Thread-1 (]: Finished running node model.Kara_dbt.medical_transformed_data
+[0m21:43:02.832065 [debug] [MainThread]: Using postgres connection "master"
+[0m21:43:02.832065 [debug] [MainThread]: On master: BEGIN
+[0m21:43:02.837116 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:43:02.977059 [debug] [MainThread]: SQL status: BEGIN in 0.143 seconds
+[0m21:43:02.977059 [debug] [MainThread]: On master: COMMIT
+[0m21:43:02.982074 [debug] [MainThread]: Using postgres connection "master"
+[0m21:43:02.982074 [debug] [MainThread]: On master: COMMIT
+[0m21:43:02.982074 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m21:43:02.987136 [debug] [MainThread]: On master: Close
+[0m21:43:02.987136 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:43:02.987136 [debug] [MainThread]: Connection 'list_postgres' was properly closed.
+[0m21:43:02.992149 [debug] [MainThread]: Connection 'list_postgres_public' was properly closed.
+[0m21:43:02.992149 [debug] [MainThread]: Connection 'model.Kara_dbt.medical_transformed_data' was properly closed.
+[0m21:43:02.992149 [info ] [MainThread]: 
+[0m21:43:02.996403 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 3.11 seconds (3.11s).
+[0m21:43:03.005945 [debug] [MainThread]: Command end result
+[0m21:43:03.106942 [info ] [MainThread]: 
+[0m21:43:03.111954 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:43:03.111954 [info ] [MainThread]: 
+[0m21:43:03.117005 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m21:43:03.123975 [debug] [MainThread]: Command `dbt run` succeeded at 21:43:03.123975 after 6.90 seconds
+[0m21:43:03.126977 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7E4D516A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7E7627740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7E76E0080>]}
+[0m21:43:03.130974 [debug] [MainThread]: Flushing usage events
+[0m23:02:33.474985 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001704E5892E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001704F408530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001704F40B920>]}
+
+
+============================== 23:02:33.894996 | a236cf76-a820-4be3-abda-d6c3437b139f ==============================
+[0m23:02:33.894996 [info ] [MainThread]: Running with dbt=1.8.7
+[0m23:02:33.994764 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'E:\\Kiffya_10_acc\\Week 7\\Kara-Solutions\\Kara_dbt\\logs', 'profiles_dir': 'C:\\Users\\Getahun\\.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --full-refresh', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m23:02:55.631915 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a236cf76-a820-4be3-abda-d6c3437b139f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001704F62B860>]}
+[0m23:02:55.759916 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a236cf76-a820-4be3-abda-d6c3437b139f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001704F254440>]}
+[0m23:02:55.802428 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m23:02:55.942856 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m23:03:00.554398 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m23:03:00.556398 [debug] [MainThread]: Partial parsing: updated file: Kara_dbt://models\schema.yml
+[0m23:03:01.642650 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `tests` config has been renamed to `data_tests`. Please see
+https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+information.
+[0m23:03:01.647652 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'a236cf76-a820-4be3-abda-d6c3437b139f', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001704FCB83B0>]}
+[0m23:03:02.664749 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.Kara_dbt.example
+[0m23:03:02.836728 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a236cf76-a820-4be3-abda-d6c3437b139f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017051053470>]}
+[0m23:03:07.424808 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a236cf76-a820-4be3-abda-d6c3437b139f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017051074830>]}
+[0m23:03:07.424808 [info ] [MainThread]: Found 2 models, 10 data tests, 1 source, 423 macros
+[0m23:03:07.424808 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a236cf76-a820-4be3-abda-d6c3437b139f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001704FDE32C0>]}
+[0m23:03:07.433242 [info ] [MainThread]: 
+[0m23:03:07.436242 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m23:03:07.446250 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m23:03:15.205185 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m23:03:15.205185 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m23:03:15.209722 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:03:15.509865 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.301 seconds
+[0m23:03:15.635033 [debug] [ThreadPool]: On list_postgres: Close
+[0m23:03:15.644742 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres_public'
+[0m23:03:15.669912 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m23:03:15.669912 [debug] [ThreadPool]: On list_postgres_public: BEGIN
+[0m23:03:15.675141 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:03:15.932394 [debug] [ThreadPool]: SQL status: BEGIN in 0.257 seconds
+[0m23:03:15.934397 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m23:03:15.935401 [debug] [ThreadPool]: On list_postgres_public: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "connection_name": "list_postgres_public"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m23:03:16.041298 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.105 seconds
+[0m23:03:16.044291 [debug] [ThreadPool]: On list_postgres_public: ROLLBACK
+[0m23:03:16.064577 [debug] [ThreadPool]: On list_postgres_public: Close
+[0m23:03:16.079613 [debug] [MainThread]: Using postgres connection "master"
+[0m23:03:16.080591 [debug] [MainThread]: On master: BEGIN
+[0m23:03:16.081592 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:03:16.209325 [debug] [MainThread]: SQL status: BEGIN in 0.128 seconds
+[0m23:03:16.210316 [debug] [MainThread]: Using postgres connection "master"
+[0m23:03:16.211313 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m23:03:16.415777 [debug] [MainThread]: SQL status: SELECT 0 in 0.204 seconds
+[0m23:03:16.418773 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a236cf76-a820-4be3-abda-d6c3437b139f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001704D01FE30>]}
+[0m23:03:16.419774 [debug] [MainThread]: On master: ROLLBACK
+[0m23:03:16.421776 [debug] [MainThread]: Using postgres connection "master"
+[0m23:03:16.423773 [debug] [MainThread]: On master: BEGIN
+[0m23:03:16.426774 [debug] [MainThread]: SQL status: BEGIN in 0.002 seconds
+[0m23:03:16.427771 [debug] [MainThread]: On master: COMMIT
+[0m23:03:16.429777 [debug] [MainThread]: Using postgres connection "master"
+[0m23:03:16.430772 [debug] [MainThread]: On master: COMMIT
+[0m23:03:16.432773 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m23:03:16.433772 [debug] [MainThread]: On master: Close
+[0m23:03:16.436775 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m23:03:16.441774 [info ] [MainThread]: 
+[0m23:03:16.725020 [debug] [Thread-1 (]: Began running node model.Kara_dbt.detection_results
+[0m23:03:16.725020 [info ] [Thread-1 (]: 1 of 2 START sql table model public.detection_results .......................... [RUN]
+[0m23:03:16.734754 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.Kara_dbt.detection_results'
+[0m23:03:16.734754 [debug] [Thread-1 (]: Began compiling node model.Kara_dbt.detection_results
+[0m23:03:16.764736 [debug] [Thread-1 (]: Writing injected SQL for node "model.Kara_dbt.detection_results"
+[0m23:03:16.892380 [debug] [Thread-1 (]: Began executing node model.Kara_dbt.detection_results
+[0m23:03:16.954962 [debug] [Thread-1 (]: Writing runtime sql for node "model.Kara_dbt.detection_results"
+[0m23:03:17.034878 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.detection_results"
+[0m23:03:17.034878 [debug] [Thread-1 (]: On model.Kara_dbt.detection_results: BEGIN
+[0m23:03:17.044733 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m23:03:17.193603 [debug] [Thread-1 (]: SQL status: BEGIN in 0.149 seconds
+[0m23:03:17.194602 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.detection_results"
+[0m23:03:17.195602 [debug] [Thread-1 (]: On model.Kara_dbt.detection_results: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.detection_results"} */
+
+  
+    
+
+  create  table "postgres"."public"."detection_results__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+select * 
+from public.detection_results
+  );
+  
+[0m23:03:18.054946 [debug] [Thread-1 (]: SQL status: SELECT 1010 in 0.861 seconds
+[0m23:03:18.064564 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.detection_results"
+[0m23:03:18.064564 [debug] [Thread-1 (]: On model.Kara_dbt.detection_results: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.detection_results"} */
+alter table "postgres"."public"."detection_results" rename to "detection_results__dbt_backup"
+[0m23:03:18.154945 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.090 seconds
+[0m23:03:18.164729 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.detection_results"
+[0m23:03:18.164729 [debug] [Thread-1 (]: On model.Kara_dbt.detection_results: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.detection_results"} */
+alter table "postgres"."public"."detection_results__dbt_tmp" rename to "detection_results"
+[0m23:03:18.164729 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m23:03:18.204938 [debug] [Thread-1 (]: On model.Kara_dbt.detection_results: COMMIT
+[0m23:03:18.206544 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.detection_results"
+[0m23:03:18.208543 [debug] [Thread-1 (]: On model.Kara_dbt.detection_results: COMMIT
+[0m23:03:18.231542 [debug] [Thread-1 (]: SQL status: COMMIT in 0.021 seconds
+[0m23:03:18.249543 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public"."detection_results__dbt_backup"
+[0m23:03:18.265546 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.detection_results"
+[0m23:03:18.267549 [debug] [Thread-1 (]: On model.Kara_dbt.detection_results: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.detection_results"} */
+drop table if exists "postgres"."public"."detection_results__dbt_backup" cascade
+[0m23:03:18.335593 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.073 seconds
+[0m23:03:18.344702 [debug] [Thread-1 (]: On model.Kara_dbt.detection_results: Close
+[0m23:03:18.354855 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a236cf76-a820-4be3-abda-d6c3437b139f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001704CFBF0B0>]}
+[0m23:03:18.354855 [info ] [Thread-1 (]: 1 of 2 OK created sql table model public.detection_results ..................... [[32mSELECT 1010[0m in 1.62s]
+[0m23:03:18.359870 [debug] [Thread-1 (]: Finished running node model.Kara_dbt.detection_results
+[0m23:03:18.362688 [debug] [Thread-1 (]: Began running node model.Kara_dbt.detection_results_transformed
+[0m23:03:18.364694 [info ] [Thread-1 (]: 2 of 2 START sql table model public.detection_results_transformed .............. [RUN]
+[0m23:03:18.367691 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.Kara_dbt.detection_results, now model.Kara_dbt.detection_results_transformed)
+[0m23:03:18.369687 [debug] [Thread-1 (]: Began compiling node model.Kara_dbt.detection_results_transformed
+[0m23:03:18.377682 [debug] [Thread-1 (]: Writing injected SQL for node "model.Kara_dbt.detection_results_transformed"
+[0m23:03:18.380687 [debug] [Thread-1 (]: Began executing node model.Kara_dbt.detection_results_transformed
+[0m23:03:18.387685 [debug] [Thread-1 (]: Writing runtime sql for node "model.Kara_dbt.detection_results_transformed"
+[0m23:03:18.830557 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.detection_results_transformed"
+[0m23:03:18.831557 [debug] [Thread-1 (]: On model.Kara_dbt.detection_results_transformed: BEGIN
+[0m23:03:18.832559 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:03:18.944942 [debug] [Thread-1 (]: SQL status: BEGIN in 0.112 seconds
+[0m23:03:18.945942 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.detection_results_transformed"
+[0m23:03:18.946924 [debug] [Thread-1 (]: On model.Kara_dbt.detection_results_transformed: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.detection_results_transformed"} */
+
+  
+    
+
+  create  table "postgres"."public"."detection_results_transformed__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with filtered_data as (
+    select 
+        image_name,
+        confidence_score,
+        class_name,
+        bbox_coordinates,
+        result_image_path,
+        detection_time
+    from "postgres"."public"."detection_results"
+)
+
+select 
+    image_name,
+    confidence_score,
+    class_name,
+    -- Access the array elements directly
+    bbox_coordinates[1] as bbox_xmin,  -- First element renamed
+    bbox_coordinates[2] as bbox_ymin,  -- Second element renamed
+    bbox_coordinates[3] as bbox_xmax,  -- Third element renamed
+    bbox_coordinates[4] as bbox_ymax,   -- Fourth element renamed
+    result_image_path,
+    detection_time
+from filtered_data
+  );
+  
+[0m23:03:19.434580 [debug] [Thread-1 (]: SQL status: SELECT 1010 in 0.488 seconds
+[0m23:03:19.449770 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.detection_results_transformed"
+[0m23:03:19.449770 [debug] [Thread-1 (]: On model.Kara_dbt.detection_results_transformed: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.detection_results_transformed"} */
+alter table "postgres"."public"."detection_results_transformed" rename to "detection_results_transformed__dbt_backup"
+[0m23:03:19.454961 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.003 seconds
+[0m23:03:19.464638 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.detection_results_transformed"
+[0m23:03:19.464638 [debug] [Thread-1 (]: On model.Kara_dbt.detection_results_transformed: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.detection_results_transformed"} */
+alter table "postgres"."public"."detection_results_transformed__dbt_tmp" rename to "detection_results_transformed"
+[0m23:03:19.469657 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m23:03:19.474788 [debug] [Thread-1 (]: On model.Kara_dbt.detection_results_transformed: COMMIT
+[0m23:03:19.474788 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.detection_results_transformed"
+[0m23:03:19.474788 [debug] [Thread-1 (]: On model.Kara_dbt.detection_results_transformed: COMMIT
+[0m23:03:19.479820 [debug] [Thread-1 (]: SQL status: COMMIT in 0.003 seconds
+[0m23:03:19.484893 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public"."detection_results_transformed__dbt_backup"
+[0m23:03:19.489942 [debug] [Thread-1 (]: Using postgres connection "model.Kara_dbt.detection_results_transformed"
+[0m23:03:19.489942 [debug] [Thread-1 (]: On model.Kara_dbt.detection_results_transformed: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "Kara_dbt", "target_name": "dev", "node_id": "model.Kara_dbt.detection_results_transformed"} */
+drop table if exists "postgres"."public"."detection_results_transformed__dbt_backup" cascade
+[0m23:03:19.537516 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.043 seconds
+[0m23:03:19.542515 [debug] [Thread-1 (]: On model.Kara_dbt.detection_results_transformed: Close
+[0m23:03:19.544518 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a236cf76-a820-4be3-abda-d6c3437b139f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001705147E7B0>]}
+[0m23:03:19.547516 [info ] [Thread-1 (]: 2 of 2 OK created sql table model public.detection_results_transformed ......... [[32mSELECT 1010[0m in 1.18s]
+[0m23:03:19.550519 [debug] [Thread-1 (]: Finished running node model.Kara_dbt.detection_results_transformed
+[0m23:03:19.555517 [debug] [MainThread]: Using postgres connection "master"
+[0m23:03:19.557518 [debug] [MainThread]: On master: BEGIN
+[0m23:03:19.558522 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:03:19.699781 [debug] [MainThread]: SQL status: BEGIN in 0.145 seconds
+[0m23:03:19.704835 [debug] [MainThread]: On master: COMMIT
+[0m23:03:19.704835 [debug] [MainThread]: Using postgres connection "master"
+[0m23:03:19.704835 [debug] [MainThread]: On master: COMMIT
+[0m23:03:19.708888 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m23:03:19.708888 [debug] [MainThread]: On master: Close
+[0m23:03:19.708888 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:03:19.714945 [debug] [MainThread]: Connection 'list_postgres' was properly closed.
+[0m23:03:19.714945 [debug] [MainThread]: Connection 'list_postgres_public' was properly closed.
+[0m23:03:19.714945 [debug] [MainThread]: Connection 'model.Kara_dbt.detection_results_transformed' was properly closed.
+[0m23:03:19.719464 [info ] [MainThread]: 
+[0m23:03:19.719464 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 12.28 seconds (12.28s).
+[0m23:03:19.731667 [debug] [MainThread]: Command end result
+[0m23:03:19.835668 [info ] [MainThread]: 
+[0m23:03:19.841700 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:03:19.845698 [info ] [MainThread]: 
+[0m23:03:19.847699 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m23:03:19.853698 [debug] [MainThread]: Command `dbt run` succeeded at 23:03:19.853698 after 48.44 seconds
+[0m23:03:19.860699 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017050F6B410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017051356390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001704CFBF0B0>]}
+[0m23:03:19.862697 [debug] [MainThread]: Flushing usage events
