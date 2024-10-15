@@ -10,25 +10,27 @@ This GitHub repository features a project to build a data warehouse for Ethiopia
   
 ## Project structure
 
-The repository is organized into the following directories:
+he repository is organized into the following directories:
 
-- **.github/workflows/**: Contains configuration files for GitHub Actions, facilitating continuous integration (CI) and automated testing workflows to ensure code quality.
+- **.github/workflows/**: Configuration files for GitHub Actions to enable continuous integration (CI) and automated testing.
 
-- **.vscode/**: Configuration files for Visual Studio Code, optimizing the development environment and providing settings specific to this project.
+- **.vscode/**: Visual Studio Code configuration files for optimizing the development environment.
 
-- **Fast_API/**: Houses the implementation of the machine learning model API, enabling interaction with the model through RESTful endpoints. This is where the core business logic and model serving reside.
-  
-- **Kara_dbt/**: Contains the DBT (Data Build Tool) project files, including models, seeds, and configurations for transforming and documenting the data in the data warehouse. This directory supports the implementation of data quality assurance and transformation processes.
+- **Fast_API/**: Implementation of the machine learning model API, providing RESTful endpoints for model interaction.
 
-- **notebooks/**: Contains Jupyter notebooks utilized for data exploration, feature engineering, and preliminary modeling. These notebooks serve as documentation for the analytical processes and insights gained throughout the project.
+- **Kara_dbt/**: DBT (Data Build Tool) project files for data transformation and documentation, ensuring data quality.
 
-- **scripts/**: Includes Python scripts for data preprocessing, feature extraction, and the implementation of the credit scoring model. This directory contains reusable code components that streamline data handling and modeling processes.
+- **database/**: Scripts and configurations for managing PostgreSQL connections and interactions.
 
-- **tests/**: Comprises unit tests designed to ensure the correctness and robustness of the implemented model and data processing logic. This directory is crucial for maintaining code quality and facilitating future development.
+- **notebooks/**: Jupyter notebooks for data exploration, feature engineering, and preliminary modeling.
 
-- **requirements.txt**: A file listing the dependencies and libraries required for the project, making it easier to set up the environment.
+- **scripts/**: Python scripts for data preprocessing, feature extraction, and credit scoring model implementation.
 
-- **README.md**: The main documentation file that provides an overview of the project, installation instructions, usage guidelines, and other essential information.
+- **tests/**: Unit tests to ensure the correctness and robustness of the model and data processing logic.
+
+- **requirements.txt**: Lists dependencies and libraries required for the project setup.
+
+- **README.md**: Main documentation file with an overview of the project, installation instructions, and usage guidelines.
 
 
 ## Installation Instructions
