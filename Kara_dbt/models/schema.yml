@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> Task-3
 version: 2
 sources:
   - name: public
     schema: public
     tables:
+<<<<<<< HEAD
       - name: medical_data
 
 models:
@@ -30,4 +34,48 @@ models:
       - name: text
         description: "The message"
         data_tests:
+=======
+      - name: detection_results
+
+models:
+  - name: detection_results_transformed
+    description: "A detection_results transformed data"
+    columns:
+      - name: image_name
+        description: "The image name"
+        tests:
+          - unique
+          - not_null
+      - name: confidence_score
+        description: "The confidence score"
+        tests:
+          - not_null
+      - name: class_name
+        description: "The class name"
+        tests:
+          - not_null
+      - name: bbox_xmin
+        description: "Bounding box x-min coordinate"
+        tests:
+          - not_null
+      - name: bbox_ymin
+        description: "Bounding box y-min coordinate"
+        tests:
+          - not_null
+      - name: bbox_xmax
+        description: "Bounding box x-max coordinate"
+        tests:
+          - not_null
+      - name: bbox_ymax
+        description: "Bounding box y-max coordinate"
+        tests:
+          - not_null
+      - name: result_image_path
+        description: "The detected image path"
+        tests:
+          - not_null
+      - name: detection_time
+        description: "The time of the detection"
+        tests:
+>>>>>>> Task-3
           - not_null
