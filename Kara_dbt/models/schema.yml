@@ -4,7 +4,7 @@ sources:
   - name: public
     schema: public
     tables:
-      - name: telegram_data
+      - name: medical_data
 
 models:
   - name: medical_transformed_data
