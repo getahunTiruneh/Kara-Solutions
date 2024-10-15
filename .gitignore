@@ -8,3 +8,5 @@ logs/
 .pytest_cache/
 data/
 photos/
+new_env/
+yolov5/
